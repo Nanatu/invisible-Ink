@@ -1,0 +1,15 @@
+MEAN Machine
+Invisible Ink (Prop N)
+
+TEAM:
+	William Zane Norris: Scrum Master
+		wnorris@siue.edu
+	Ryan Estes: Customer Proxy
+		restes@siue.edu
+	Colin Engle: Quality Assurance
+		cengle@siue.edu
+
+CLIENY:
+	Valerie Vogrin
+		vvogrin@siue.edu
+
