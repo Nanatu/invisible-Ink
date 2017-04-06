@@ -28,7 +28,7 @@
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -36,45 +36,65 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="indexBeta.html">Invisible Ink</a>
+          <a class="navbar-brand" href="index.html">Invisible Ink</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="indexBeta.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Archives <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="archiveBeta.html">Poems & Sonnets</a></li>
-                <li><a href="archiveBeta.html">Flash Fiction</a></li>
-                <li><a href="archiveBeta.html">Short Stories</a></li>
-				<li><a href="archiveBeta.html">Novella</a></li>
-                <!-- <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li> -->
+				<li><a href="archive.html">All</a></li>
+                <li><a href="archive.html">Poems & Sonnets</a></li>
+                <li><a href="archive.html">Flash Fiction</a></li>
+                <li><a href="archive.html">Short Stories</a></li>
+				<li><a href="archive.html">Novella</a></li>
               </ul>
             </li>
+			<li>
           </ul>
+		  <ul class="nav navbar-nav navbar-right">
+			<!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+			<li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		  </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+	
+	<!-- Code for login form found on Bootsnipp - "Clean Modal Login Form" by Ashbo @ http://bootsnipp.com/snippets/featured/clean-modal-login-form -->
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	  <div class="modal-dialog">
+		<div class="loginmodal-container">
+		  <h1>Login to your account.</h1><br>
+		  <form>
+			<input type="text" name="user" placeholder="Email/Username">
+			<input type="password" name="pass" placeholder="Password">
+			<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+		  </form>
+		  
+		  <div class="login-help">
+		    <a href="#">Register</a> - <a href="#">Forgot Password</a>
+		  </div>
+		</div> 
+	  </div>
+	</div>
+	
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <h1>Invisible Ink</h1>
         <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="about.html" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
     <div class="container">
 		<!-- Example row of columns -->
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-5">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h2 class="text-center">Most Popular</h2>
@@ -84,14 +104,14 @@
 					<h4>Alpha Author <small>3/28/2017 10:15AM</small></h4>
 					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 					<ul class="list-inline">
-						<li><a class="btn btn-default" href="#" role="button">View story &raquo;</a></li>
+						<li><a class="btn btn-default" href="storyAlpha.html" role="button">View story &raquo;</a></li>
 						<li>23 <span class="glyphicon glyphicon-thumbs-up"></span></li>
 						<li>56 <span class="glyphicon glyphicon-eye-open"></span></p></li>
 					</ul>
 				</div>
 			</div>
 			</div>
-			<div class="col-md-5">
+			<div class="col-sm-5">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h2 class="text-center">Most Recent</h2>
@@ -111,13 +131,13 @@
 				</div>
 			</div>
 			</div>
-			<div class="col-md-1"></div>
+			<div class="col-sm-1"></div>
 		</div>
 
 		<hr>
 
 		<footer>
-			<p>&copy; 2017 Company, Inc.</p>
+			<p>MEAN Machine - Spring Semester 2017</p>
 		</footer>
     </div> <!-- /container -->
 
