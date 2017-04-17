@@ -11,22 +11,22 @@
 
     <title>Invisible Ink - Ephemeral Art Application</title>
 
-	<script>
-		setInterval(startStory, 5000);
-	
+	<script>		
+		setInterval(startStory, 1000);
+		
 		function startStory() {
 			var story = document.getElementById('story').innerHTML;
 			var segStory = story.split(" ");
 			var pos = 0;
 	
-			/*for(var i = 0; i < segStory.length; i++) {
-				if(segStory[i].localeCompare('DELETE') == 0) {
-					pos++;
-				}
-			}*/
 			var randNum = Math.floor(Math.random() * segStory.length) % segStory.length; 
 	
-			segStory[randNum] = "DELETE";
+			var word = "";
+			for(var i = 0; i < segStory[randNum].length; i++) {
+				word += " ";
+			}
+			segStory[randNum] = word;
+			//segStory[randNum] = "DELETE";
 	
 			var newStory = segStory[0];
 	
@@ -55,6 +55,7 @@
   </head>
 
   <body onload="startStory()">
+  <!-- <body> -->
   
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container-fluid">

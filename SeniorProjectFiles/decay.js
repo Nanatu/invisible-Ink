@@ -26,7 +26,7 @@ var art = ["a", "an", "the"];
 var con = ["and", "or", "but", "nor", "so", "for", "yet", "after", "although", "as", "because", "before", "even", "if", "even", "once", "since", "so", "though", "till", "unless", "until", "what", "when", "whenever", "wherever", "whether", "while"];
 
 //List of verb suffixes
-var suf = ["ing", "s",
+var suf = ["ing", "s"];
 
 var dateU, dateC;
 var likes, views;
@@ -80,11 +80,19 @@ for(var i = 1; i < segStory.length; i++) {
 //Creates the complex array of words to play with.
 for(var i = 0; i < simpleSS.length; i++) {
 	var typeInt = detPOS(simpleSS[i]);
-	var heiValue = typeInt * 10;
-	complexSS.push({ original:segStory[i], simple:simpleSS[i], type:typeInt, value:heiValue});
+	var heiValue = (17-typeInt) * typeInt * 10; //Temporary heiarchy value for now.
+	complexSS.push({ original:segStory[i], simple:simpleSS[i], type:typeInt, value:heiValue, exists:true});
 }
 
-//------------------------------------------------------------FUNCTIONS-------------------------------------------------------------------------//
+//Here begins the "decay formula" and the deletion of random words. 1/((17-type)*type * 10) chance to delete word.
+function ShowStory() {
+	var story;
+	
+	
+	
+	window.setTimeout("ShowStory();", 1000);
+}
+//----------------------------------------------------------------FUNCTIONS-------------------------------------------------------------------------//
 
 //Determines the words type 
 function detPOS(var str) {
