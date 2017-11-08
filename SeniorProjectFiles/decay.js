@@ -36,19 +36,19 @@ var influ = [10000, 5000, 3000, 1000, 1000, 100];
  * 		Since the number of minor ticks are ten per major clock tick, the initial tick should be 1/10 the way through with each one after being additive.
  */
 
-var curTime = Date.now();	// Current
+var curTime = Date.now();	// Current time of the system, NON database value
 
-// STORY DATABASE ACCESS FOR FOLLOWING VARS
-var nextEvent;				// nextEvent
+var nextEvent;				// nextEvent, fetch next_event
 
 if(curTime >= nextEvent) {
-	var story; 				// story
-	var views;				// views
-	var cycle;				// cycle
+	var story; 				// story, fetch story_body 
+	var views;				// views, fetch views
+	var cycle;				// cycle, fetch cycle
+	var likes;				// likes, fetch likes
+	var minorTick;          // minorTick, fetch minor_tick_rate
 	
 	cycle++;
 
-	
 	// Block to determine a word at a random position in the current string.
 	var storyLen = story.length();
 	var startPos;
@@ -86,17 +86,25 @@ if(curTime >= nextEvent) {
 	}
 			
 	// Decay algorithm; calculate decay for the word and then compares it to a random number that is generated.	Decays if less than random generated.
-	var decay = 1/views * (inf/(Math.pow(2, cycle/10)))/100;
+	var decay = likes/views * (inf/(Math.pow(2, cycle/10)))/100;
 
+	// Decay happens to word if decay value is less than the random number range [0.0, 1.0)
+	
 	// End calculations to determine clock ticks and rate decreases.
 	if(cycle%10 == 0) {
 		//nextMajor = curTime + majorTick/tickRate;	// Update the time of the next major clock tick.
 		nextMajor = nextEvent + majorTick/tickRate	// Update the time of the next major clock tick. 
 		majorTick = nextMajor - curTime;			// Update length of the major tick.
 		minorTick = majorTick/10;					// Update the length of each minor tick.
+		// Update minorTickRate
 	}
 	
 	nextEvent = nextEvent + minorTick;				// Update the time of the next event.
+	
+	// Database updates
+	// Update cycle
+	// Update next_event
+	// Update story_body
 }
 
 
