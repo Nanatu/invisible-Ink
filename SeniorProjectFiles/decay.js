@@ -38,9 +38,11 @@ var influ = [10000, 5000, 3000, 1000, 1000, 100];
 
 var curTime = Date.now();	// Current time of the system, NON database value
 
+// DATABASE FETCH
 var nextEvent;				// nextEvent, fetch next_event
 
 if(curTime >= nextEvent) {
+	// DATABASE FETCH
 	var story; 				// story, fetch story_body 
 	var views;				// views, fetch views
 	var cycle;				// cycle, fetch cycle
@@ -92,19 +94,19 @@ if(curTime >= nextEvent) {
 	
 	// End calculations to determine clock ticks and rate decreases.
 	if(cycle%10 == 0) {
-		//nextMajor = curTime + majorTick/tickRate;	// Update the time of the next major clock tick.
+		var tickRate;								// tickRate, fetch tick_rate
 		nextMajor = nextEvent + majorTick/tickRate	// Update the time of the next major clock tick. 
 		majorTick = nextMajor - curTime;			// Update length of the major tick.
 		minorTick = majorTick/10;					// Update the length of each minor tick.
-		// Update minorTickRate
 	}
 	
 	nextEvent = nextEvent + minorTick;				// Update the time of the next event.
 	
-	// Database updates
+	// DATABASE UPDATE
 	// Update cycle
 	// Update next_event
 	// Update story_body
+	// Update minor_tick_rate
 }
 
 
