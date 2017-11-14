@@ -7,14 +7,20 @@
 // Schema defined below
 
 // Global constants for mongoose.
+// npm install mongoose
 const mongoose = require('mongoose');
 const Schema = require('mongoose').Schema;
 
 //third-party mongoose library for easier auto incremental '_id'.
+// npm install mongoose-auto-increment
 const autoIncrement = require('mongoose-auto-increment');
 
 // Connection URI for MongoDB connection.
+<<<<<<< HEAD
 mongoose.connect('mongodb://localhost/stories');
+=======
+mongoose.connect('mongodb://localhost:27017/stories');
+>>>>>>> 0fb7a51ff6545d8b66f22e800afc1f7bc5d4541b
 
 // Simple check to see if connection was successful.
 var db = mongoose.connection;
@@ -31,7 +37,11 @@ var stories = mongoose.Schema({
   story_title: String,
   story_author: String,
   story_body: String,
+<<<<<<< HEAD
   date_created: { type: Date, default: Date.now }, // timestamp
+=======
+  date_created: { type: Date, default: Date.now },
+>>>>>>> 0fb7a51ff6545d8b66f22e800afc1f7bc5d4541b
   tick_rate: Number,
   influence_rate: Number,
   next_event: Number,
