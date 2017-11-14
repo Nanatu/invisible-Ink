@@ -1,22 +1,21 @@
 // This Javascript file connects to the Invisible Ink MongoDB using Mongoose.
 //
-// hostname: Invisibleink
-// password: MeanMachine2017
-// MachineName: InvisibleInk
 // db name: stories
 // collection: story
 //
 // Schema defined below
 
 // Global constants for mongoose.
+// npm install mongoose
 const mongoose = require('mongoose');
 const Schema = require('mongoose').Schema;
 
 //third-party mongoose library for easier auto incremental '_id'.
+// npm install mongoose-auto-increment
 const autoIncrement = require('mongoose-auto-increment');
 
 // Connection URI for MongoDB connection.
-mongoose.connect('mongodb://invisibleink:MeanMachine2017@InvisibleInk/stories');
+mongoose.connect('mongodb://localhost:27017/stories');
 
 // Simple check to see if connection was successful.
 var db = mongoose.connection;
@@ -50,7 +49,7 @@ var storiesSchema = mongoose.Schema({
   story_title: String,
   story_author: String,
   story_body: String,
-  date_created: Date,
+  date_created: { type: Date, default: Date.now },
   tick_rate: Number,
   minor_tick_rate: Number,
   influence_rate: Number,
