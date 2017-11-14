@@ -1,8 +1,6 @@
 // This Javascript file connects to the Invisible Ink MongoDB using Mongoose.
+// Mainly a driver and instantiation class.
 //
-// hostname: Invisibleink
-// password: MeanMachine2017
-// MachineName: InvisibleInk
 // db name: stories
 // collection: story
 //
@@ -16,7 +14,7 @@ const Schema = require('mongoose').Schema;
 const autoIncrement = require('mongoose-auto-increment');
 
 // Connection URI for MongoDB connection.
-mongoose.connect('mongodb://invisibleink:MeanMachine2017@InvisibleInk/stories');
+mongoose.connect('mongodb://localhost/stories');
 
 // Simple check to see if connection was successful.
 var db = mongoose.connection;
@@ -28,31 +26,13 @@ db.once('open', function() {
 // Third party instantiation for auto _id increment. Only needs declared once.
 autoIncrement.initialize(db);
 
-// Schema declaration for stories db.
-//
-//   _id: Number
-//          - unique incremental id that will be automatically given by mongoose-auto-increment.
-//            *doesn't need declared in schema.*
-//   story_title: String
-//   story_author: String
-//   story_body: String (up to 16MB)
-//   data_created: Date
-//   tick_rate: Number
-//   influence_rate: Number
-//   next_event: Number (references the _id)
-//   cycles: Number
-//   likes: Number
-//   views: Number
-
-
-var storiesSchema = mongoose.Schema({
+var stories = mongoose.Schema({
   // _id: Number, This is automatically instantatied and incremented by third-party tool.
   story_title: String,
   story_author: String,
   story_body: String,
-  date_created: Date,
+  date_created: { type: Date, default: Date.now }, // timestamp
   tick_rate: Number,
-  minor_tick_rate: Number,
   influence_rate: Number,
   next_event: Number,
   cycles: Number,
@@ -60,34 +40,156 @@ var storiesSchema = mongoose.Schema({
   views: Number
 });
 
-storiesSchema.plugin(autoIncrement.plugin, 'Story'); //LoC that increments _id field.
+stories.plugin(autoIncrement.plugin, 'Story'); //LoC that increments _id field.
 
 // Creation of model which is a class in which mongoose creates MongoDB Documents.
-var Story = mongoose.model('Story', storiesSchema);
+var Story = mongoose.model('Story', stories);
 module.exports = Story;
 
-// At this point we can start adding and pulling to and from the DB.
+// INSERT query for a new story. (CONSTRUCTOR)
+function createStory(String title, String author, Number tickRate, Number infRate){
+  var newStory = new Story({
+     story_title: title,
+     story_author: author,
+     story_body: getBody(),
+     tick_rate: tickRate,
+     influence_rate: infRate,
+     next_event: getNextEvent(),
+     cycles: 0,
+     likes: 0,
+     views: 0
+   };
+
+   newStory.save(function (err) {
+     console.log('Story saved successfully!');
+     if (err) return handleError(err);
+   });
+}
+
+
+// GETTERS
+function getTitle(){
+  Story.findOne({ 'story_title': this.stories[0] }, function (err, title) {
+    if (err) return handleError(err);
+    console.log('%s found!', title)
+  });
+};
+
+function getAuthor(){
+  Story.findOne({ 'story_author': this.stories[1] }, function (err, author) {
+    if (err) return handleError(err);
+    console.log('%s found!', author)
+  });
+};
+
+function getBody(){
+  Story.findOne({ 'story_body': this.stories[2] }, function (err, body) {
+    if (err) return handleError(err);
+    console.log('%s found!', body)
+  });
+};
+
+function getDateCreated(){
+  Story.findOne({ 'date_created': this.stories[3] }, function (err, date) {
+    if (err) return handleError(err);
+    console.log('%s found!', date)
+  });
+};
+
+function getTickRate(){
+  Story.findOne({ 'tick_rate': this.stories[4] }, function (err, tick) {
+    if (err) return handleError(err);
+    console.log('%s found!', tick)
+  });
+};
+
+function getInfluenceRate(){
+  Story.findOne({ 'influence_rate': this.stories[5] }, function (err, inf) {
+    if (err) return handleError(err);
+    console.log('%s found!', inf)
+  });
+};
+
+function getNextEvent(){
+  Story.findOne({ 'next_event': this.stories[6] }, function (err, nexte) {
+    if (err) return handleError(err);
+    console.log('%s found!', nexte)
+  });
+};
+
+function getCycles(){
+  Story.findOne({ 'cycles': this.stories[7] }, function (err, cycle) {
+    if (err) return handleError(err);
+    console.log('%s found!', cycle)
+  });
+};
+
+function getLikes(){
+  Story.findOne({ 'likes': this.stories[8] }, function (err, like) {
+    if (err) return handleError(err);
+    console.log('%s found!', like)
+  });
+};
+
+function getViews(){
+  Story.findOne({ 'views': this.stories[9] }, function (err, view) {
+    if (err) return handleError(err);
+    console.log('%s found!', view)
+  });
+};
 
 
 
-// Example Query For Entire Schema:
-//
-// var newStory = new Story({
-//   story_title: <Insert Title Here>,
-//   story_author: <Insert Author Here>,
-//   story_body: <Insert Body Here>,
-//   tick_rate: <Insert tick rate Here>,
-//   influence_rate: <Insert influence rate Here>,
-//   next_event: <Insert next event _id number Here>,
-//   cycles: <Insert cycles Here>,
-//   likes: <Insert likes Here>,
-//   views: 0       // will be 0 on creation
-// };
-//
-// Story..save(function(err) {
-//   console.log('User saved successfully!');
-//   if (err) throw err;
-// });
+
+
+// Unique getter that is used as a find function for the current story.
+// This uses the author and title to find the current document.
+function query(){
+  var query = { 'story_author': author, 'story_title': title };
+  // then update according to the current document setter.
+}
+
+
+// Find and Update Queries (SETTERS)
+function setViews(Number title){
+  Story.update(query(), { $set: { story_title: title}}, callback);
+};
+
+function setViews(Number author){
+  Story.update(query(), { $set: { story_author: author}}, callback);
+};
+
+function setViews(Number body){
+  Story.update(query(), { $set: { story_body: body}}, callback);
+};
+
+function setViews(Number dateCreated){
+  Story.update(query(), { $set: { date_created: dateCreated}}, callback);
+};
+
+function setViews(Number ticks){
+  Story.update(query(), { $set: { tick_rate: ticks}}, callback);
+};
+
+function setViews(Number inf_rate){
+  Story.update(query(), { $set: { influence_rate: inf_rate}}, callback);
+};
+
+function setViews(Number next_e){
+  Story.update(query(), { $set: { next_event: next_e}}, callback);
+};
+
+function setViews(Number cyc){
+  Story.update(query(), { $set: { cycles: cyc}}, callback);
+};
+
+function setViews(Number like){
+  Story.update(query(), { $set: { likes: like}}, callback);
+};
+
+function setViews(Number v){
+  Story.update(query(), { $set: { views: v}}, callback);
+};
 
 
 // Example Find and Update query that will be used every single time a user views,
