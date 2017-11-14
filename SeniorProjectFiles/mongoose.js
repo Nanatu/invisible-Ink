@@ -7,20 +7,14 @@
 // Schema defined below
 
 // Global constants for mongoose.
-// npm install mongoose
 const mongoose = require('mongoose');
 const Schema = require('mongoose').Schema;
 
 //third-party mongoose library for easier auto incremental '_id'.
-// npm install mongoose-auto-increment
 const autoIncrement = require('mongoose-auto-increment');
 
 // Connection URI for MongoDB connection.
-<<<<<<< HEAD
 mongoose.connect('mongodb://localhost/stories');
-=======
-mongoose.connect('mongodb://localhost:27017/stories');
->>>>>>> 0fb7a51ff6545d8b66f22e800afc1f7bc5d4541b
 
 // Simple check to see if connection was successful.
 var db = mongoose.connection;
@@ -37,11 +31,7 @@ var stories = mongoose.Schema({
   story_title: String,
   story_author: String,
   story_body: String,
-<<<<<<< HEAD
   date_created: { type: Date, default: Date.now }, // timestamp
-=======
-  date_created: { type: Date, default: Date.now },
->>>>>>> 0fb7a51ff6545d8b66f22e800afc1f7bc5d4541b
   tick_rate: Number,
   influence_rate: Number,
   next_event: Number,
@@ -57,7 +47,7 @@ var Story = mongoose.model('Story', stories);
 module.exports = Story;
 
 // INSERT query for a new story. (CONSTRUCTOR)
-function createStory(String title, String author, Number tickRate, Number infRate){
+function createStory(title, author, tickRate, infRate){
   var newStory = new Story({
      story_title: title,
      story_author: author,
@@ -68,7 +58,7 @@ function createStory(String title, String author, Number tickRate, Number infRat
      cycles: 0,
      likes: 0,
      views: 0
-   };
+   });
 
    newStory.save(function (err) {
      console.log('Story saved successfully!');
@@ -161,43 +151,43 @@ function query(){
 
 
 // Find and Update Queries (SETTERS)
-function setViews(Number title){
+function setViews(title){
   Story.update(query(), { $set: { story_title: title}}, callback);
 };
 
-function setViews(Number author){
+function setViews(author){
   Story.update(query(), { $set: { story_author: author}}, callback);
 };
 
-function setViews(Number body){
+function setViews(body){
   Story.update(query(), { $set: { story_body: body}}, callback);
 };
 
-function setViews(Number dateCreated){
+function setViews(dateCreated){
   Story.update(query(), { $set: { date_created: dateCreated}}, callback);
 };
 
-function setViews(Number ticks){
+function setViews(ticks){
   Story.update(query(), { $set: { tick_rate: ticks}}, callback);
 };
 
-function setViews(Number inf_rate){
+function setViews(inf_rate){
   Story.update(query(), { $set: { influence_rate: inf_rate}}, callback);
 };
 
-function setViews(Number next_e){
+function setViews(next_e){
   Story.update(query(), { $set: { next_event: next_e}}, callback);
 };
 
-function setViews(Number cyc){
+function setViews(cyc){
   Story.update(query(), { $set: { cycles: cyc}}, callback);
 };
 
-function setViews(Number like){
+function setViews(like){
   Story.update(query(), { $set: { likes: like}}, callback);
 };
 
-function setViews(Number v){
+function setViews(v){
   Story.update(query(), { $set: { views: v}}, callback);
 };
 
