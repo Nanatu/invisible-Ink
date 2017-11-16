@@ -50,12 +50,20 @@ module.exports = Story;
 // INSERT query for a new story. (CONSTRUCTOR)
 function createStory(){
   var newStory = new Story({
+<<<<<<< HEAD
      story_title: "",
      story_author: "",
      story_body: "",
 	 story_type: "",
      tick_rate: 0,
      influence_rate: 0,
+=======
+     story_title: title,
+     story_author: author,
+     story_body: "",
+     tick_rate: tickRate,
+     influence_rate: infRate,
+>>>>>>> a50c1893016309261d0a002dd719e398d4e6dedf
      next_event: 0,
      cycles: 0,
      likes: 0,
