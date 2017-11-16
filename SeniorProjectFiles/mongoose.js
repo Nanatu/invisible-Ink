@@ -51,10 +51,10 @@ function createStory(title, author, tickRate, infRate){
   var newStory = new Story({
      story_title: title,
      story_author: author,
-     story_body: getBody(),
+     story_body: "",
      tick_rate: tickRate,
      influence_rate: infRate,
-     next_event: getNextEvent(),
+     next_event: 0,
      cycles: 0,
      likes: 0,
      views: 0
