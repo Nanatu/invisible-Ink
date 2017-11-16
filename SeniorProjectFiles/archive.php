@@ -49,7 +49,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Archives <span class="caret"></span></a>
               <ul class="dropdown-menu">
 				<li><a href="archive.php?page=1&type=all">All</a></li>
-				<li><a href="exampleStory.html">Example</a></li>
+				<li><a href="archive.php?page=1&type=example">Examples</a></li>
                 <li><a href="archive.php?page=1&type=poem">Poems & Sonnets</a></li>
                 <li><a href="archive.php?page=1&type=flash">Flash Fiction</a></li>
                 <li><a href="archive.php?page=1&type=short">Short Stories</a></li>
