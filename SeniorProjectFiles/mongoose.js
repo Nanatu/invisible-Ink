@@ -50,20 +50,17 @@ module.exports = Story;
 // INSERT query for a new story. (CONSTRUCTOR)
 function createStory(){
   var newStory = new Story({
-<<<<<<< HEAD
      story_title: "",
      story_author: "",
      story_body: "",
 	 story_type: "",
      tick_rate: 0,
      influence_rate: 0,
-=======
      story_title: title,
      story_author: author,
      story_body: "",
      tick_rate: tickRate,
      influence_rate: infRate,
->>>>>>> a50c1893016309261d0a002dd719e398d4e6dedf
      next_event: 0,
      cycles: 0,
      likes: 0,
@@ -77,14 +74,30 @@ function createStory(){
 }
 
 
-// GETTERS
+// GETTERS FOR GROUPS
+function getStories(type){
+	if(type == "all") {
+		return Story.find({}, function (err, id[]) {
+			if (err) return handleError(err);
+			return id;
+		});
+	}
+	else {
+		Story.find({story_type: type}, function (err, id[]) {
+			if (err) return handleError(err);
+			return id;
+		});
+	}
+};
+
+
+// GETTERS FOR INDIVIDUAL STORIES
 function getID(id){
 	Story.findById(id, function (err, id) {
     if (err) return handleError(err);
     return id;
   });
 };
-
 
 //function getTitle(){
   //Story.findOne({ 'story_title': this.stories[0] }, function (err, title) {
@@ -169,9 +182,6 @@ function getViews(id){
     return Story.views;
   });
 };
-
-
-
 
 
 // Unique getter that is used as a find function for the current story.
