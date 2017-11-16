@@ -24,7 +24,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
+  
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -64,90 +64,33 @@
       </div>
     </nav>
 	
-	<!-- Code for login form found on Bootsnipp - "Clean Modal Login Form" by Ashbo @ http://bootsnipp.com/snippets/featured/clean-modal-login-form -->
-	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-	  <div class="modal-dialog">
-		<div class="loginmodal-container">
-		  <h1>Login to your account.</h1><br>
-		  <form>
-			<input type="text" name="user" placeholder="Email/Username">
-			<input type="password" name="pass" placeholder="Password">
-			<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-		  </form>
-		  
-		  <div class="login-help">
-		    <a href="#">Register</a> - <a href="#">Forgot Password</a>
-		  </div>
-		</div> 
-	  </div>
-	</div>
 	
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Invisible Ink</h1>
-        <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
-        <p><a class="btn btn-primary btn-lg" href="about.html" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class="container">
+	<div class="container">
 		<!-- Example row of columns -->
 		<div class="row">
 			<div class="col-sm-1"></div>
 			<div class="col-sm-5">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h2 class="text-center">Most Popular</h2>
+					<h2 class="text-center">Uploading a story</h2>
 				</div>
-				<div class="panel-body">
-					<h3>Alpha Title</h3>
-					<h4>Alpha Author <small>3/28/2017 10:15AM</small></h4>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<ul class="list-inline">
-						<li><a class="btn btn-default" href="storyAlpha.html" role="button">View story &raquo;</a></li>
-						<li>23 <span class="glyphicon glyphicon-thumbs-up"></span></li>
-						<li>56 <span class="glyphicon glyphicon-eye-open"></span></p></li>
-					</ul>
-				</div>
-			</div>
-			</div>
-			<div class="col-sm-5">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h2 class="text-center">Most Recent</h2>
-				</div>
-				<div class="panel-body">
-					<h3>Beta Title</h3>
-					<!-- <h3>Beta Title <small>Beta Author</small></h3> -->
-					<!-- <h4>3/28/2017 10:21AM</h4> -->
-					<!-- <h4><small>3/28/2017 10:21AM</small></h4> -->
-					<h4>Beta Author <small>3/28/2017 10:21AM</small></h4>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<ul class="list-inline">
-						<li><a class="btn btn-default" href="storyBeta.html" role="button">View story &raquo;</a></li>
-						<li>10 <span class="glyphicon glyphicon-thumbs-up"></span></li>
-						<li>17 <span class="glyphicon glyphicon-eye-open"></span></p></li>
-					</ul>
-				</div>
-			</div>
-			</div>
-			<div class="col-sm-1"></div>
+			<ul>
+				<li> Title <input type="text" name="title"><br></li>
+				<li> Author <input type="text" name="author"><br></li>
+				<li> Enter story below <form action="/action_page.php" id="usrform">
+				</form>
+					<br>
+				<textarea rows="4" cols="50" name="comment" form="usrform">
+				Enter text here...</textarea>
+				<input type="submit"></li>
+			</ul>
 		</div>
-
-		<hr>
-
-		<footer>
-			<p>MEAN Machine - Spring Semester 2017</p>
-		</footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
+	</div>
+	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
     <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+	</body>
+	</html>
