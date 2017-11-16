@@ -9,7 +9,7 @@ TEAM:
 	Colin Engle: Quality Assurance
 		cengle@siue.edu
 
-CLIENY:
+CLIENT:
 	Valerie Vogrin
 		vvogrin@siue.edu
 
