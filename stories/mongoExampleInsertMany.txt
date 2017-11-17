@@ -1,0 +1,351 @@
+try {
+    db.stories.insertMany( [
+	    { _id: 1000, story_title: "Alice's Adventures in Wonderland", story_author: "Lewis Carroll", story_body: "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'
+
+So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy- chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.
+
+There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat- pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.
+
+In another moment down went Alice after it, never once considering how in the world she was to get out again.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1001, story_title: "Candide", story_author: "Voltaire", story_body: "In the country of Westphalia, in the castle of the most noble Baron of Thunder-ten-tronckh, lived a youth whom Nature had endowed with a most sweet disposition. His face was the true index of his mind. He had a solid judgment joined to the most unaffected simplicity; and hence, I presume, he had his name of Candide. The old servants of the house suspected him to have been the son of the Baron's sister, by a very good sort of a gentleman of the neighborhood, whom that young lady refused to marry, because he could produce no more than threescore and eleven quarterings in his arms; the rest of the genealogical tree belonging to the family having been lost through the injuries of time.
+
+The Baron was one of the most powerful lords in Westphalia, for his castle had not only a gate, but even windows, and his great hall was hung with tapestry. He used to hunt with his mastiffs and spaniels instead of greyhounds; his groom served him for huntsman; and the parson of the parish officiated as his grand almoner. He was called "My Lord" by all his people, and he never told a story but everyone laughed at it.
+
+My Lady Baroness, who weighed three hundred and fifty pounds, consequently was a person of no small consideration; and then she did the honors of the house with a dignity that commanded universal respect. Her daughter was about seventeen years of age, fresh-colored, comely, plump, and desirable. The Baron's son seemed to be a youth in every respect worthy of the father he sprung from. Pangloss, the preceptor, was the oracle of the family, and little Candide listened to his instructions with all the simplicity natural to his age and disposition.
+
+Master Pangloss taught the metaphysico-theologo-cosmolonigology. He could prove to admiration that there is no effect without a cause; and, that in this best of all possible worlds, the Baron's castle was the most magnificent of all castles, and My Lady the best of all possible baronesses.
+
+"It is demonstrable," said he, "that things cannot be otherwise than as they are; for as all things have been created for some end, they must necessarily be created for the best end. Observe, for instance, the nose is formed for spectacles, therefore we wear spectacles. The legs are visibly designed for stockings, accordingly we wear stockings. Stones were made to be hewn and to construct castles, therefore My Lord has a magnificent castle; for the greatest baron in the province ought to be the best lodged. Swine were intended to be eaten, therefore we eat pork all the year round: and they, who assert that everything is right, do not express themselves correctly; they should say that everything is best."
+
+Candide listened attentively and believed implicitly, for he thought Miss Cunegund excessively handsome, though he never had the courage to tell her so. He concluded that next to the happiness of being Baron of Thunder-ten-tronckh, the next was that of being Miss Cunegund, the next that of seeing her every day, and the last that of hearing the doctrine of Master Pangloss, the greatest philosopher of the whole province, and consequently of the whole world.
+
+One day when Miss Cunegund went to take a walk in a little neighboring wood which was called a park, she saw, through the bushes, the sage Doctor Pangloss giving a lecture in experimental philosophy to her mother's chambermaid, a little brown wench, very pretty, and very tractable. As Miss Cunegund had a great disposition for the sciences, she observed with the utmost attention the experiments which were repeated before her eyes; she perfectly well understood the force of the doctor's reasoning upon causes and effects. She retired greatly flurried, quite pensive and filled with the desire of knowledge, imagining that she might be a sufficing reason for young Candide, and he for her.
+
+On her way back she happened to meet the young man; she blushed, he blushed also; she wished him a good morning in a flattering tone, he returned the salute, without knowing what he said. The next day, as they were rising from dinner, Cunegund and Candide slipped behind the screen. The miss dropped her handkerchief, the young man picked it up. She innocently took hold of his hand, and he as innocently kissed hers with a warmth, a sensibility, a grace-all very particular; their lips met; their eyes sparkled; their knees trembled; their hands strayed. The Baron chanced to come by; he beheld the cause and effect, and, without hesitation, saluted Candide with some notable kicks on the breech and drove him out of doors. The lovely Miss Cunegund fainted away, and, as soon as she came to herself, the Baroness boxed her ears. Thus a general consternation was spread over this most magnificent and most agreeable of all possible castles.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1002, story_title: "Alice's Adventures in Wonderland", story_author: "Lewis Carroll", story_body: "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'
+
+So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy- chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.
+
+There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat- pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.
+
+In another moment down went Alice after it, never once considering how in the world she was to get out again.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1003, story_title: "Frankenstein", story_author: "Mary Shelley", story_body: "
+I am by birth a Genevese; and my family is one of the most distinguished of that republic. My ancestors had been for many years counsellors and syndics; and my father had filled several public situations with honour and reputation. He was respected by all who knew him for his integrity and indefatigable attention to public business. He passed his younger days perpetually occupied by the affairs of his country; a variety of circumstances had prevented his marrying early, nor was it until the decline of life that he became a husband and the father of a family.
+
+As the circumstances of his marriage illustrate his character, I cannot refrain from relating them. One of his most intimate friends was a merchant, who, from a flourishing state, fell, through numerous mischances, into poverty. This man, whose name was Beaufort, was of a proud and unbending disposition, and could not bear to live in poverty and oblivion in the same country where he had formerly been distinguished for his rank and magnificence. Having paid his debts, therefore, in the most honourable manner, he retreated with his daughter to the town of Lucerne, where he lived unknown and in wretchedness. My father loved Beaufort with the truest friendship, and was deeply grieved by his retreat in these unfortunate circumstances. He bitterly deplored the false pride which led his friend to a conduct so little worthy of the affection that united them. He lost no time in endeavouring to seek him out, with the hope of persuading him to begin the world again through his credit and assistance.
+
+Beaufort had taken effectual measures to conceal himself; and it was ten months before my father discovered his abode. Overjoyed at this discovery, he hastened to the house, which was situated in a mean street, near the Reuss. But when he entered, misery and despair alone welcomed him. Beaufort had saved but a very small sum of money from the wreck of his fortunes; but it was sufficient to provide him with sustenance for some months, and in the meantime he hoped to procure some respectable employment in a merchant's house. The interval was, consequently, spent in inaction; his grief only became more deep and rankling when he had leisure for reflection; and at length it took so fast hold of his mind that at the end of three months he lay on a bed of sickness, incapable of any exertion.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1004, story_title: "The Ants and the Grasshopper", story_author: "Aesop", story_body: "THE ANTS were spending a fine winter's day drying grain collected in the summertime. A Grasshopper, perishing with famine, passed by and earnestly begged for a little food. The Ants inquired of him, "Why did you not treasure up food during the summer?' He replied, "I had not leisure enough. I passed the days in singing." They then said in derision: "If you were foolish enough to sing all the summer, you must dance supperless to bed in the winter."
+", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1005, story_title: "The Cask of Amontillado", story_author: "Edgar Allan Poe", story_body: "THE thousand injuries of Fortunato I had borne as I best could, but when he ventured upon insult, I vowed revenge. You, who so well know the nature of my soul, will not suppose, however, that I gave utterance to a threat. AT LENGTH I would be avenged; this was a point definitively settled -- but the very definitiveness with which it was resolved precluded the idea of risk. I must not only punish, but punish with impunity. A wrong is unredressed when retribution overtakes its redresser. It is equally unredressed when the avenger fails to make himself felt as such to him who has done the wrong.
+
+It must be understood that neither by word nor deed had I given Fortunato cause to doubt my good will. I continued as was my wont, to smile in his face, and he did not perceive that my smile NOW was at the thought of his immolation.
+
+He had a weak point -- this Fortunato -- although in other regards he was a man to be respected and even feared. He prided himself on his connoisseurship in wine. Few Italians have the true virtuoso spirit. For the most part their enthusiasm is adopted to suit the time and opportunity to practise imposture upon the British and Austrian MILLIONAIRES. In painting and gemmary, Fortunato, like his countrymen , was a quack, but in the matter of old wines he was sincere. In this respect I did not differ from him materially; I was skilful in the Italian vintages myself, and bought largely whenever I could.
+
+It was about dusk, one evening during the supreme madness of the carnival season, that I encountered my friend. He accosted me with excessive warmth, for he had been drinking much. The man wore motley. He had on a tight-fitting parti-striped dress and his head was surmounted by the conical cap and bells. I was so pleased to see him, that I thought I should never have done wringing his hand.
+
+I said to him -- "My dear Fortunato, you are luckily met. How remarkably well you are looking to-day! But I have received a pipe of what passes for Amontillado, and I have my doubts."
+
+"How?" said he, "Amontillado? A pipe? Impossible ? And in the middle of the carnival?"
+
+"I have my doubts," I replied; "and I was silly enough to pay the full Amontillado price without consulting you in the matter. You were not to be found, and I was fearful of losing a bargain."
+
+"Amontillado!"
+
+"I have my doubts."
+
+"Amontillado!"
+
+"And I must satisfy them."
+
+"Amontillado!"
+
+"As you are engaged, I am on my way to Luchesi. If any one has a critical turn, it is he. He will tell me" --
+
+"Luchesi cannot tell Amontillado from Sherry."
+
+"And yet some fools will have it that his taste is a match for your own."
+
+"Come let us go."
+
+"Whither?"
+
+"To your vaults."
+
+"My friend, no; I will not impose upon your good nature. I perceive you have an engagement Luchesi" --
+
+"I have no engagement; come."
+
+"My friend, no. It is not the engagement, but the severe cold with which I perceive you are afflicted . The vaults are insufferably damp. They are encrusted with nitre."
+
+"Let us go, nevertheless. The cold is merely nothing. Amontillado! You have been imposed upon; and as for Luchesi, he cannot distinguish Sherry from Amontillado."
+
+Thus speaking, Fortunato possessed himself of my arm. Putting on a mask of black silk and drawing a roquelaire closely about my person, I suffered him to hurry me to my palazzo.
+
+There were no attendants at home; they had absconded to make merry in honour of the time. I had told them that I should not return until the morning and had given them explicit orders not to stir from the house. These orders were sufficient, I well knew, to insure their immediate disappearance , one and all, as soon as my back was turned.
+
+I took from their sconces two flambeaux, and giving one to Fortunato bowed him through several suites of rooms to the archway that led into the vaults. I passed down a long and winding staircase, requesting him to be cautious as he followed. We came at length to the foot of the descent, and stood together on the damp ground of the catacombs of the Montresors.
+
+The gait of my friend was unsteady, and the bells upon his cap jingled as he strode.
+
+"The pipe," said he.
+
+"It is farther on," said I; "but observe the white webwork which gleams from these cavern walls."
+
+He turned towards me and looked into my eyes with two filmy orbs that distilled the rheum of intoxication .
+
+"Nitre?" he asked, at length
+
+"Nitre," I replied. "How long have you had that cough!"
+
+"Ugh! ugh! ugh! -- ugh! ugh! ugh! -- ugh! ugh! ugh! -- ugh! ugh! ugh! -- ugh! ugh! ugh!
+
+My poor friend found it impossible to reply for many minutes.
+
+"It is nothing," he said, at last.
+
+"Come," I said, with decision, we will go back; your health is precious. You are rich, respected, admired, beloved; you are happy as once I was. You are a man to be missed. For me it is no matter. We will go back; you will be ill and I cannot be responsible. Besides, there is Luchesi" --
+
+"Enough," he said; "the cough is a mere nothing; it will not kill me. I shall not die of a cough."
+
+"True -- true," I replied; "and, indeed, I had no intention of alarming you unnecessarily -- but you should use all proper caution. A draught of this Medoc will defend us from the damps."
+
+Here I knocked off the neck of a bottle which I drew from a long row of its fellows that lay upon the mould.
+
+"Drink," I said, presenting him the wine.
+
+He raised it to his lips with a leer. He paused and nodded to me familiarly, while his bells jingled.
+
+"I drink," he said, "to the buried that repose around us."
+
+"And I to your long life."
+
+He again took my arm and we proceeded.
+
+"These vaults," he said, are extensive."
+
+"The Montresors," I replied, "were a great numerous family."
+
+"I forget your arms."
+
+"A huge human foot d'or, in a field azure; the foot crushes a serpent rampant whose fangs are imbedded in the heel."
+
+"And the motto?"
+
+"Nemo me impune lacessit."
+
+"Good!" he said.
+
+The wine sparkled in his eyes and the bells jingled. My own fancy grew warm with the Medoc. We had passed through walls of piled bones, with casks and puncheons intermingling, into the inmost recesses of the catacombs. I paused again, and this time I made bold to seize Fortunato by an arm above the elbow.
+
+"The nitre!" I said: see it increases. It hangs like moss upon the vaults. We are below the river's bed. The drops of moisture trickle among the bones. Come, we will go back ere it is too late. Your cough" --
+
+"It is nothing" he said; "let us go on. But first, another draught of the Medoc."
+
+I broke and reached him a flagon of De Grave. He emptied it at a breath. His eyes flashed with a fierce light. He laughed and threw the bottle upwards with a gesticulation I did not understand.
+
+I looked at him in surprise. He repeated the movement -- a grotesque one.
+
+"You do not comprehend?" he said.
+
+"Not I," I replied.
+
+"Then you are not of the brotherhood."
+
+"How?"
+
+"You are not of the masons."
+
+"Yes, yes," I said "yes! yes."
+
+"You? Impossible! A mason?"
+
+"A mason," I replied.
+
+"A sign," he said.
+
+"It is this," I answered, producing a trowel from beneath the folds of my roquelaire.
+
+"You jest," he exclaimed, recoiling a few paces. "But let us proceed to the Amontillado."
+
+"Be it so," I said, replacing the tool beneath the cloak, and again offering him my arm. He leaned upon it heavily. We continued our route in search of the Amontillado. We passed through a range of low arches, descended, passed on, and descending again, arrived at a deep crypt, in which the foulness of the air caused our flambeaux rather to glow than flame.
+
+At the most remote end of the crypt there appeared another less spacious. Its walls had been lined with human remains piled to the vault overhead , in the fashion of the great catacombs of Paris. Three sides of this interior crypt were still ornamented in this manner. From the fourth the bones had been thrown down, and lay promiscuously upon the earth, forming at one point a mound of some size. Within the wall thus exposed by the displacing of the bones, we perceived a still interior recess, in depth about four feet, in width three, in height six or seven. It seemed to have been constructed for no especial use in itself, but formed merely the interval between two of the colossal supports of the roof of the catacombs, and was backed by one of their circumscribing walls of solid granite.
+
+It was in vain that Fortunato, uplifting his dull torch, endeavoured to pry into the depths of the recess. Its termination the feeble light did not enable us to see.
+
+"Proceed," I said; "herein is the Amontillado. As for Luchesi" --
+
+"He is an ignoramus," interrupted my friend, as he stepped unsteadily forward, while I followed immediately at his heels. In an instant he had reached the extremity of the niche, and finding his progress arrested by the rock, stood stupidly bewildered . A moment more and I had fettered him to the granite. In its surface were two iron staples, distant from each other about two feet, horizontally. From one of these depended a short chain. from the other a padlock. Throwing the links about his waist, it was but the work of a few seconds to secure it. He was too much astounded to resist . Withdrawing the key I stepped back from the recess.
+
+"Pass your hand," I said, "over the wall; you cannot help feeling the nitre. Indeed it is VERY damp. Once more let me IMPLORE you to return. No? Then I must positively leave you. But I must first render you all the little attentions in my power."
+
+"The Amontillado!" ejaculated my friend, not yet recovered from his astonishment.
+
+"True," I replied; "the Amontillado."
+
+As I said these words I busied myself among the pile of bones of which I have before spoken. Throwing them aside, I soon uncovered a quantity of building stone and mortar. With these materials and with the aid of my trowel, I began vigorously to wall up the entrance of the niche.
+
+I had scarcely laid the first tier of my masonry when I discovered that the intoxication of Fortunato had in a great measure worn off. The earliest indication I had of this was a low moaning cry from the depth of the recess. It was NOT the cry of a drunken man. There was then a long and obstinate silence. I laid the second tier, and the third, and the fourth; and then I heard the furious vibrations of the chain. The noise lasted for several minutes, during which, that I might hearken to it with the more satisfaction, I ceased my labours and sat down upon the bones. When at last the clanking subsided , I resumed the trowel, and finished without interruption the fifth, the sixth, and the seventh tier. The wall was now nearly upon a level with my breast. I again paused, and holding the flambeaux over the mason-work, threw a few feeble rays upon the figure within.
+
+A succession of loud and shrill screams, bursting suddenly from the throat of the chained form, seemed to thrust me violently back. For a brief moment I hesitated -- I trembled. Unsheathing my rapier, I began to grope with it about the recess; but the thought of an instant reassured me. I placed my hand upon the solid fabric of the catacombs , and felt satisfied. I reapproached the wall. I replied to the yells of him who clamoured. I reechoed -- I aided -- I surpassed them in volume and in strength. I did this, and the clamourer grew still.
+
+It was now midnight, and my task was drawing to a close. I had completed the eighth, the ninth, and the tenth tier. I had finished a portion of the last and the eleventh; there remained but a single stone to be fitted and plastered in. I struggled with its weight; I placed it partially in its destined position. But now there came from out the niche a low laugh that erected the hairs upon my head. It was succeeded by a sad voice, which I had difficulty in recognising as that of the noble Fortunato. The voice said --
+
+"Ha! ha! ha! -- he! he! -- a very good joke indeed -- an excellent jest. We will have many a rich laugh about it at the palazzo -- he! he! he! -- over our wine -- he! he! he!"
+
+"The Amontillado!" I said.
+
+"He! he! he! -- he! he! he! -- yes, the Amontillado . But is it not getting late? Will not they be awaiting us at the palazzo, the Lady Fortunato and the rest? Let us be gone."
+
+"Yes," I said "let us be gone."
+
+"FOR THE LOVE OF GOD, MONTRESOR!"
+
+"Yes," I said, "for the love of God!"
+
+But to these words I hearkened in vain for a reply. I grew impatient. I called aloud --
+
+"Fortunato!"
+
+No answer. I called again --
+
+"Fortunato!"
+
+No answer still. I thrust a torch through the remaining aperture and let it fall within. There came forth in return only a jingling of the bells. My heart grew sick -- on account of the dampness of the catacombs. I hastened to make an end of my labour. I forced the last stone into its position; I plastered it up. Against the new masonry I reerected the old rampart of bones. For the half of a century no mortal has disturbed them.
+
+In pace requiescat!", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1006, story_title: "The Fellowship of the Ring", story_author: "J R R Tolkien", story_body: "When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton.
+
+Bilbo was very rich and very peculiar, and had been the wonder of the Shire for sixty years, ever since his remarkable disappearance and unexpected return. The riches he had brought back from his travels had now become a local legend, and it was popularly believed, whatever the old folk might say, that the Hill at Bag End was full of tunnels stuffed with treasure. And if that was not enough for fame, there was also his prolonged vigour to marvel at. Time wore on, but it seemed to have little effect on Mr. Baggins. At ninety he was much the same as at fifty. At ninety-nine they began to call him well-preserved, but unchanged would have been nearer the mark. There were some that shook their heads and thought this was too much of a good thing; it seemed unfair that anyone should possess (apparently) perpetual youth as well as (reputedly) inexhaustible wealth.
+
+‘It will have to be paid for,’ they said. ‘It isn’t natural, and trouble will come of it!’
+
+But so far trouble had not come; and as Mr. Baggins was generous with his money, most people were willing to forgive him his oddities and his good fortune. He remained on visiting terms with his relatives (except, of course, the Sackville-Bagginses), and he had many devoted admirers among the hobbits of poor and unimportant families. But he had no close friends, until some of his younger cousins began to grow up.
+
+The eldest of these, and Bilbo’s favourite, was young Frodo Baggins. When Bilbo was ninety-nine, he adopted Frodo as his heir, and brought him to live at Bag End; and the hopes of the Sackville-Bagginses were finally dashed. Bilbo and Frodo happened to have the same birthday, September 22nd. ‘You had better come and live here, Frodo my lad,’ said Bilbo one day; ‘and then we can celebrate our birthday-parties comfortably together.’ At that time Frodo was still in his tweens, as the hobbits called the irresponsible twenties between childhood and coming of age at thirty-three.
+
+Twelve more years passed. Each year the Bagginses had given very lively combined birthday-parties at Bag End; but now it was understood that something quite exceptional was being planned for that autumn. Bilbo was going to be eleventy-one, 111, a rather curious number and a very respectable age for a hobbit (the Old Took himself had only reached 130); and Frodo was going to be thirty-three, 33) an important number: the date of his ‘coming of age’.
+
+Tongues began to wag in Hobbiton and Bywater; and rumour of the coming event travelled all over the Shire. The history and character of Mr. Bilbo Baggins became once again the chief topic of conversation; and the older folk suddenly found their reminiscences in welcome demand.
+
+No one had a more attentive audience than old Ham Gamgee, commonly known as the Gaffer. He held forth at The Ivy Bush, a small inn on the Bywater road; and he spoke with some authority, for he had tended the garden at Bag End for forty years, and had helped old Holman in the same job before that. Now that he was himself growing old and stiff in the joints, the job was mainly carried on by his youngest son, Sam Gamgee. Both father and son were on very friendly terms with Bilbo and Frodo. They lived on the Hill itself, in Number 3 Bagshot Row just below Bag End.
+
+‘A very nice well-spoken gentlehobbit is Mr. Bilbo, as I’ve always said,’ the Gaffer declared. With perfect truth: for Bilbo was very polite to him, calling him ‘Master Hamfast’, and consulting him constantly upon the growing of vegetables - in the matter of ‘roots’, especially potatoes, the Gaffer was recognized as the leading authority by all in the neighbourhood (including himself).
+
+‘But what about this Frodo that lives with him?’ asked Old Noakes of Bywater. ‘Baggins is his name, but he’s more than half a Brandybuck, they say. It beats me why any Baggins of Hobbiton should go looking for a wife away there in Buckland, where folks are so queer.’
+
+‘And no wonder they’re queer,’ put in Daddy Twofoot (the Gaffer’s next-door neighbour), ‘if they live on the wrong side of the Brandywine River, and right agin the Old Forest. That’s a dark bad place, if half the tales be true.’
+‘You’re right, Dad!’ said the Gaffer. ‘Not that the Brandybucks of Buck-land live in the Old Forest; but they’re a queer breed, seemingly. They fool about with boats on that big river - and that isn’t natural. Small wonder that trouble came of it, I say. But be that as it may, Mr. Frodo is as nice a young hobbit as you could wish to meet. Very much like Mr. Bilbo, and in more than looks. After all his father was a Baggins. A decent respectable hobbit was Mr. Drogo Baggins; there was never much to tell of him, till he was drownded.’
+
+‘Drownded?’ said several voices. They had heard this and other darker rumours before, of course; but hobbits have a passion for family history, and they were ready to hear it again. ‘Well, so they say,’ said the Gaffer. ‘You see: Mr. Drogo, he married poor Miss Primula Brandybuck. She was our Mr. Bilbo’s first cousin on the mother’s side (her mother being the youngest of the Old Took’s daughters); and Mr. Drogo was his second cousin. So Mr. Frodo is his first and second cousin, once removed either way, as the saying is, if you follow me. And Mr. Drogo was staying at Brandy Hall with his father-in-law, old Master Gorbadoc, as he often did after his marriage (him being partial to his vittles, and old Gorbadoc keeping a mighty generous table); and he went out boating on the Brandywine River; and he and his wife were drownded, and poor Mr. Frodo only a child and all.‘
+
+‘I’ve heard they went on the water after dinner in the moonlight,’ said Old Noakes; ‘and it was Drogo’s weight as sunk the boat.’
+
+‘And I heard she pushed him in, and he pulled her in after him,’ said Sandyman, the Hobbiton miller.
+
+‘You shouldn’t listen to all you hear, Sandyman,’ said the Gaffer, who did not much like the miller. ‘There isn’t no call to go talking of pushing and pulling. Boats are quite tricky enough for those that sit still without looking further for the cause of trouble. Anyway: there was this Mr. Frodo left an orphan and stranded, as you might say, among those queer Bucklanders, being brought up anyhow in Brandy Hall. A regular warren, by all accounts. Old Master Gorbadoc never had fewer than a couple of hundred relations in the place. Mr. Bilbo never did a kinder deed than when he brought the lad back to live among decent folk.
+
+‘But I reckon it was a nasty shock for those Sackville-Bagginses. They thought they were going to get Bag End, that time when he went off and was thought to be dead. And then he comes back and orders them off; and he goes on living and living, and never looking a day older, bless him! And suddenly he produces an heir, and has all the papers made out proper. The Sackville-Bagginses won’t never see the inside of Bag End now, or it is to be hoped not.’
+
+‘There’s a tidy bit of money tucked away up there, I hear tell,’ said a stranger, a visitor on business from Michel Delving in the Westfarthing. ‘All the top of your hill is full of tunnels packed with chests of gold and silver, and jools, by what I’ve heard.‘
+
+‘Then you’ve heard more than I can speak to,’ answered the Gaffer. I know nothing about jools. Mr. Bilbo is free with his money, and there seems no lack of it; but I know of no tunnel-making. I saw Mr. Bilbo when he came back, a matter of sixty years ago, when I was a lad. I’d not long come prentice to old Holman (him being my dad’s cousin), but he had me up at Bag End helping him to keep folks from trampling and trapessing all over the garden while the sale was on. And in the middle of it all Mr. Bilbo comes up the Hill with a pony and some mighty big bags and a couple of chests. I don’t doubt they were mostly full of treasure he had picked up in foreign parts, where there be mountains of gold, they say; but there wasn’t enough to fill tunnels. But my lad Sam will know more about that. He’s in and out of Bag End. Crazy about stories of the old days he is, and he listens to all Mr. Bilbo’s tales. Mr. Bilbo has learned him his letters - meaning no harm, mark you, and I hope no harm will come of it.
+
+‘Elves and Dragons’ I says to him. ‘Cabbages and potatoes are better for me and you. Don’t go getting mixed up in the business of your betters, or you’ll land in trouble too big for you,’ I says to him. And I might say it to others,’ he added with a look at the stranger and the miller.
+
+But the Gaffer did not convince his audience. The legend of Bilbo’s wealth was now too firmly fixed in the minds of the younger generation of hobbits.
+
+‘Ah, but he has likely enough been adding to what he brought at first,’ argued the miller, voicing common opinion. ‘He’s often away from home. And look at the outlandish folk that visit him: dwarves coming at night, and that old wandering conjuror, Gandalf, and all. You can say what you like, Gaffer, but Bag End’s a queer place, and its folk are queerer.’
+
+‘And you can say what you like, about what you know no more of than you do of boating, Mr. Sandyman,’ retorted the Gaffer, disliking the miller even more than usual. If that’s being queer, then we could do with a bit more queerness in these parts. There’s some not far away that wouldn’t offer a pint of beer to a friend, if they lived in a hole with golden walls. But they do things proper at Bag End. Our Sam says that everyone’s going to be invited to the party, and there’s going to be presents, mark you, presents for all - this very month as is.’
+
+That very month was September, and as fine as you could ask. A day or two later a rumour (probably started by the knowledgeable Sam) was spread about that there were going to be fireworks - fireworks, what is more, such as had not been seen in the Shire for nigh on a century, not indeed since the Old Took died.
+
+Days passed and The Day drew nearer. An odd-looking waggon laden with odd-looking packages rolled into Hobbiton one evening and toiled up the Hill to Bag End. The startled hobbits peered out of lamplit doors to gape at it. It was driven by outlandish folk, singing strange songs: dwarves with long beards and deep hoods. A few of them remained at Bag End. At the end of the second week in September a cart came in through Bywater from the direction of the Brandywine Bridge in broad daylight. An old man was driving it all alone. He wore a tall pointed blue hat, a long grey cloak, and a silver scarf. He had a long white beard and bushy eyebrows that stuck out beyond the brim of his hat. Small hobbit-children ran after the cart all through Hobbiton and right up the hill. It had a cargo of fireworks, as they rightly guessed. At Bilbo’s front door the old man began to unload: there were great bundles of fireworks of all sorts and shapes, each labelled with a large red G and the elf-rune, G.
+
+That was Gandalf’s mark, of course, and the old man was Gandalf the Wizard, whose fame in the Shire was due mainly to his skill with fires, smokes, and lights. His real business was far more difficult and dangerous, but the Shire-folk knew nothing about it. To them he was just one of the ‘attractions’ at the Party. Hence the excitement of the hobbit-children. ‘G for Grand!’ they shouted, and the old man smiled. They knew him by sight, though he only appeared in Hobbiton occasionally and never stopped long; but neither they nor any but the oldest of their elders had seen one of his firework displays - they now belonged to the legendary past.
+
+When the old man, helped by Bilbo and some dwarves, had finished unloading. Bilbo gave a few pennies away; but not a single squib or cracker was forthcoming, to the disappointment of the onlookers.
+
+‘Run away now!’ said Gandalf. ‘You will get plenty when the time comes.’ Then he disappeared inside with Bilbo, and the door was shut. The young hobbits stared at the door in vain for a while, and then made off, feeling that the day of the party would never come.
+
+Inside Bag End, Bilbo and Gandalf were sitting at the open window of a small room looking out west on to the garden. The late afternoon was bright and peaceful. The flowers glowed red and golden: snap-dragons and sun-flowers, and nasturtiums trailing all over the turf walls and peeping in at the round windows.
+
+‘How bright your garden looks!’ said Gandalf.
+
+‘Yes,’ said Bilbo. I am very fond indeed of it, and of all the dear old Shire; but I think I need a holiday.’
+
+‘You mean to go on with your plan then?’
+
+‘I do. I made up my mind months ago, and I haven’t changed it.’
+
+‘Very well. It is no good saying any more. Stick to your plan - your whole plan, mind - and I hope it will turn out for the best, for you, and for all of us.’
+
+‘I hope so. Anyway I mean to enjoy myself on Thursday, and have my little joke.’
+
+‘Who will laugh, I wonder?’ said Gandalf, shaking his head.
+
+‘We shall see,’ said Bilbo.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1007, story_title: "The Hare and the Tortoise", story_author: "Aesop", story_body: "A HARE one day ridiculed the short feet and slow pace of the Tortoise, who replied, laughing: "Though you be swift as the wind, I will beat you in a race." The Hare, believing her assertion to be simply impossible, assented to the proposal; and they agreed that the Fox should choose the course and fix the goal. On the day appointed for the race the two started together. The Tortoise never for a moment stopped, but went on with a slow but steady pace straight to the end of the course. The Hare, lying down by the wayside, fell fast asleep. At last waking up, and moving as fast as he could, he saw the Tortoise had reached the goal, and was comfortably dozing after her fatigue. Slow but steady wins the race.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1008, story_title: "The Hares and the Foxes", story_author: "Aesop", story_body: "THE HARES waged war with the Eagles, and called upon the Foxes to help them. They replied, "We would willingly have helped you, if we had not known who you were, and with whom you were fighting."
+
+Count the cost before you commit yourselves.", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1009, story_title: "The Lam and the Wolf", story_author: "Aesop", story_body: "A WOLF pursued a Lamb, which fled for refuge to a certain Temple. The Wolf called out to him and said, "The Priest will slay you in sacrifice, if he should catch you." On which the Lamb replied, "It would be better for me to be sacrificed in the Temple than to be eaten by you."
+", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1010, story_title: "The Man and the Lion", story_author: "Aesop", story_body: "A MAN and a Lion traveled together through the forest. They soon began to boast of their respective superiority to each other in strength and prowess. As they were disputing, they passed a statue carved in stone, which represented "a Lion strangled by a Man." The traveler pointed to it and said: "See there! How strong we are, and how we prevail over even the king of beasts." The Lion replied: "This statue was made by one of you men. If we Lions knew how to erect statues, you would see the Man placed under the paw of the Lion." One story is good, till another is told.
+", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1011, story_title: "The Tell-Tale Heart", story_author: "Edgar Allan Poe", story_body: "TRUE! nervous, very, very dreadfully nervous I had been and am; but why WILL you say that I am mad? The disease had sharpened my senses, not destroyed, not dulled them. Above all was the sense of hearing acute. I heard all things in the heaven and in the earth. I heard many things in hell. How then am I mad? Hearken! and observe how healthily, how calmly, I can tell you the whole story.
+
+It is impossible to say how first the idea entered my brain, but, once conceived, it haunted me day and night. Object there was none. Passion there was none. I loved the old man. He had never wronged me. He had never given me insult. For his gold I had no desire. I think it was his eye! Yes, it was this! One of his eyes resembled that of a vulture -- a pale blue eye with a film over it. Whenever it fell upon me my blood ran cold, and so by degrees, very gradually, I made up my mind to take the life of the old man, and thus rid myself of the eye for ever.
+
+Now this is the point. You fancy me mad. Madmen know nothing. But you should have seen me. You should have seen how wisely I proceeded -- with what caution -- with what foresight, with what dissimulation, I went to work! I was never kinder to the old man than during the whole week before I killed him. And every night about midnight I turned the latch of his door and opened it oh, so gently! And then, when I had made an opening sufficient for my head, I put in a dark lantern all closed, closed so that no light shone out, and then I thrust in my head. Oh, you would have laughed to see how cunningly I thrust it in! I moved it slowly, very, very slowly, so that I might not disturb the old man's sleep. It took me an hour to place my whole head within the opening so far that I could see him as he lay upon his bed. Ha! would a madman have been so wise as this? And then when my head was well in the room I undid the lantern cautiously -- oh, so cautiously -- cautiously (for the hinges creaked), I undid it just so much that a single thin ray fell upon the vulture eye. And this I did for seven long nights, every night just at midnight, but I found the eye always closed, and so it was impossible to do the work, for it was not the old man who vexed me but his Evil Eye. And every morning, when the day broke, I went boldly into the chamber and spoke courageously to him, calling him by name in a hearty tone, and inquiring how he had passed the night. So you see he would have been a very profound old man, indeed , to suspect that every night, just at twelve, I looked in upon him while he slept.
+
+Upon the eighth night I was more than usually cautious in opening the door. A watch's minute hand moves more quickly than did mine. Never before that night had I felt the extent of my own powers, of my sagacity. I could scarcely contain my feelings of triumph. To think that there I was opening the door little by little, and he not even to dream of my secret deeds or thoughts. I fairly chuckled at the idea, and perhaps he heard me, for he moved on the bed suddenly as if startled. Now you may think that I drew back -- but no. His room was as black as pitch with the thick darkness (for the shutters were close fastened through fear of robbers), and so I knew that he could not see the opening of the door, and I kept pushing it on steadily, steadily.
+
+I had my head in, and was about to open the lantern, when my thumb slipped upon the tin fastening , and the old man sprang up in the bed, crying out, "Who's there?"
+
+I kept quite still and said nothing. For a whole hour I did not move a muscle, and in the meantime I did not hear him lie down. He was still sitting up in the bed, listening; just as I have done night after night hearkening to the death watches in the wall.
+
+Presently, I heard a slight groan, and I knew it was the groan of mortal terror. It was not a groan of pain or of grief -- oh, no! It was the low stifled sound that arises from the bottom of the soul when overcharged with awe. I knew the sound well. Many a night, just at midnight, when all the world slept, it has welled up from my own bosom, deepening, with its dreadful echo, the terrors that distracted me. I say I knew it well. I knew what the old man felt, and pitied him although I chuckled at heart. I knew that he had been lying awake ever since the first slight noise when he had turned in the bed. His fears had been ever since growing upon him. He had been trying to fancy them causeless, but could not. He had been saying to himself, "It is nothing but the wind in the chimney, it is only a mouse crossing the floor," or, "It is merely a cricket which has made a single chirp." Yes he has been trying to comfort himself with these suppositions ; but he had found all in vain. ALL IN VAIN, because Death in approaching him had stalked with his black shadow before him and enveloped the victim. And it was the mournful influence of the unperceived shadow that caused him to feel, although he neither saw nor heard, to feel the presence of my head within the room.
+
+When I had waited a long time very patiently without hearing him lie down, I resolved to open a little -- a very, very little crevice in the lantern. So I opened it -- you cannot imagine how stealthily, stealthily -- until at length a single dim ray like the thread of the spider shot out from the crevice and fell upon the vulture eye.
+
+It was open, wide, wide open, and I grew furious as I gazed upon it. I saw it with perfect distinctness -- all a dull blue with a hideous veil over it that chilled the very marrow in my bones, but I could see nothing else of the old man's face or person, for I had directed the ray as if by instinct precisely upon the damned spot.
+
+And now have I not told you that what you mistake for madness is but over-acuteness of the senses? now, I say, there came to my ears a low, dull, quick sound, such as a watch makes when enveloped in cotton. I knew that sound well too. It was the beating of the old man's heart. It increased my fury as the beating of a drum stimulates the soldier into courage.
+
+But even yet I refrained and kept still. I scarcely breathed. I held the lantern motionless. I tried how steadily I could maintain the ray upon the eye. Meantime the hellish tattoo of the heart increased. It grew quicker and quicker, and louder and louder, every instant. The old man's terror must have been extreme! It grew louder, I say, louder every moment! -- do you mark me well? I have told you that I am nervous: so I am. And now at the dead hour of the night, amid the dreadful silence of that old house, so strange a noise as this excited me to uncontrollable terror. Yet, for some minutes longer I refrained and stood still. But the beating grew louder, louder! I thought the heart must burst. And now a new anxiety seized me -- the sound would be heard by a neighbour! The old man's hour had come! With a loud yell, I threw open the lantern and leaped into the room. He shrieked once -- once only. In an instant I dragged him to the floor, and pulled the heavy bed over him. I then smiled gaily, to find the deed so far done. But for many minutes the heart beat on with a muffled sound. This, however, did not vex me; it would not be heard through the wall. At length it ceased. The old man was dead. I removed the bed and examined the corpse. Yes, he was stone, stone dead. I placed my hand upon the heart and held it there many minutes. There was no pulsation. He was stone dead. His eye would trouble me no more.
+
+If still you think me mad, you will think so no longer when I describe the wise precautions I took for the concealment of the body. The night waned, and I worked hastily, but in silence.
+
+I took up three planks from the flooring of the chamber, and deposited all between the scantlings. I then replaced the boards so cleverly so cunningly, that no human eye -- not even his -- could have detected anything wrong. There was nothing to wash out -- no stain of any kind -- no blood-spot whatever. I had been too wary for that.
+
+When I had made an end of these labours, it was four o'clock -- still dark as midnight. As the bell sounded the hour, there came a knocking at the street door. I went down to open it with a light heart, -- for what had I now to fear? There entered three men, who introduced themselves, with perfect suavity, as officers of the police. A shriek had been heard by a neighbour during the night; suspicion of foul play had been aroused; information had been lodged at the police office, and they (the officers) had been deputed to search the premises.
+
+I smiled, -- for what had I to fear? I bade the gentlemen welcome. The shriek, I said, was my own in a dream. The old man, I mentioned, was absent in the country. I took my visitors all over the house. I bade them search -- search well. I led them, at length, to his chamber. I showed them his treasures, secure, undisturbed. In the enthusiasm of my confidence, I brought chairs into the room, and desired them here to rest from their fatigues, while I myself, in the wild audacity of my perfect triumph, placed my own seat upon the very spot beneath which reposed the corpse of the victim.
+
+The officers were satisfied. My MANNER had convinced them. I was singularly at ease. They sat and while I answered cheerily, they chatted of familiar things. But, ere long, I felt myself getting pale and wished them gone. My head ached, and I fancied a ringing in my ears; but still they sat, and still chatted. The ringing became more distinct : I talked more freely to get rid of the feeling: but it continued and gained definitiveness -- until, at length, I found that the noise was NOT within my ears.
+
+No doubt I now grew VERY pale; but I talked more fluently, and with a heightened voice. Yet the sound increased -- and what could I do? It was A LOW, DULL, QUICK SOUND -- MUCH SUCH A SOUND AS A WATCH MAKES WHEN ENVELOPED IN COTTON. I gasped for breath, and yet the officers heard it not. I talked more quickly, more vehemently but the noise steadily increased. I arose and argued about trifles, in a high key and with violent gesticulations; but the noise steadily increased. Why WOULD they not be gone? I paced the floor to and fro with heavy strides, as if excited to fury by the observations of the men, but the noise steadily increased. O God! what COULD I do? I foamed -- I raved -- I swore! I swung the chair upon which I had been sitting, and grated it upon the boards, but the noise arose over all and continually increased. It grew louder -- louder -- louder! And still the men chatted pleasantly , and smiled. Was it possible they heard not? Almighty God! -- no, no? They heard! -- they suspected! -- they KNEW! -- they were making a mockery of my horror! -- this I thought, and this I think. But anything was better than this agony! Anything was more tolerable than this derision! I could bear those hypocritical smiles no longer! I felt that I must scream or die! -- and now -- again -- hark! louder! louder! louder! LOUDER! --
+
+"Villains!" I shrieked, "dissemble no more! I admit the deed! -- tear up the planks! -- here, here! -- it is the beating of his hideous heart!"", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1012, story_title: "The Wolf and the Fox", story_author: "Aesop", story_body: "AT ONE TIME a very large and strong Wolf was born among the wolves, who exceeded all his fellow-wolves in strength, size, and swiftness, so that they unanimously decided to call him "Lion." The Wolf, with a lack of sense proportioned to his enormous size, thought that they gave him this name in earnest, and, leaving his own race, consorted exclusively with the lions. An old sly Fox, seeing this, said, "May I never make myself so ridiculous as you do in your pride and self-conceit; for even though you have the size of a lion among wolves, in a herd of lions you are definitely a wolf."
+", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0},
+		{ _id: 1013, story_title: "Through the Looking Glass", story_author: "Lewis Carroll", story_body: "One thing was certain, that the white kitten had had nothing to do with it: -- it was the black kitten's fault entirely. For the white kitten had been having its face washed by the old cat for the last quarter of an hour (and bearing it pretty well, considering); so you see that it couldn't have had any hand in the mischief.
+
+The way Dinah washed her children's faces was this: first she held the poor thing down by its ear with one paw, and then with the other paw she rubbed its face all over, the wrong way, beginning at the nose: and just now, as I said, she was hard at work on the white kitten, which was lying quite still and trying to purr -- no doubt feeling that it was all meant for its good.
+
+But the black kitten had been finished with earlier in the afternoon, and so, while Alice was sitting curled up in a corner of the great arm-chair, half talking to herself and half asleep, the kitten had been having a grand game of romps with the ball of worsted Alice had been trying to wind up, and had been rolling it up and down till it had all come undone again; and there it was, spread over the hearth-rug, all knots and tangles, with the kitten running after its own tail in the middle.
+
+`Oh, you wicked little thing!' cried Alice, catching up the kitten, and giving it a little kiss to make it understand that it was in disgrace. `Really, Dinah ought to have taught you better manners! You ought, Dinah, you know you ought!' she added, looking reproachfully at the old cat, and speaking in as cross a voice as she could manage -- and then she scrambled back into the arm-chair, taking the kitten and the worsted with her, and began winding up the ball again. But she didn't get on very fast, as she was talking all the time, sometimes to the kitten, and sometimes to herself. Kitty sat very demurely on her knee, pretending to watch the progress of the winding, and now and then putting out one paw and gently touching the ball, as if it would be glad to help, if it might.
+
+`Do you know what to-morrow is, Kitty?' Alice began. `You'd have guessed if you'd been up in the window with me -- only Dinah was making you tidy, so you couldn't. I was watching the boys getting in stick for the bonfire -- and it wants plenty of sticks, Kitty! Only it got so cold, and it snowed so, they had to leave off. Never mind, Kitty, we'll go and see the bonfire to-morrow.' Here Alice wound two or three turns of the worsted round the kitten's neck, just to see how it would look: this led to a scramble, in which the ball rolled down upon the floor, and yards and yards of it got unwound again.
+
+`Do you know, I was so angry, Kitty,' Alice went on as soon as they were comfortably settled again, `when I saw all the mischief you had been doing, I was very nearly opening the window, and putting you out into the snow! And you'd have deserved it, you little mischievous darling! What have you got to say for yourself? Now don't interrupt me!' she went on, holding up one finger. `I'm going to tell you all your faults. Number one: you squeaked twice while Dinah was washing your face this morning. Now you can't deny it, Kitty: I heard you! What that you say?' (pretending that the kitten was speaking.) `Her paw went into your eye? Well, that's your fault, for keeping your eyes open -- if you'd shut them tight up, it wouldn't have happened. Now don't make any more excuses, but listen! Number two: you pulled Snowdrop away by the tail just as I had put down the saucer of milk before her! What, you were thirsty, were you?
+", story_type: "Short Story", date_created: new ISODate(), tick_rate: 0, influence_rate: 0, next_event: 0, cycles: 0, likes: 0, views: 0}
+	]);
+} catch (e) {
+print (e);
+}
