@@ -24,11 +24,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
-  <script type="text/javascript" src="mongoose.js"></script>
   
   <body>
 
+	<script type="text/javascript" src="mongoose.js"></script>
+  
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -49,13 +49,14 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Archives <span class="caret"></span></a>
               <ul class="dropdown-menu">
 				<li><a href="archive.php?page=1&type=all">All</a></li>
-				<li><a href="archive.php?page=1&type=example">Examples</a></li>
+				<li><a href="exampleStory.html">Examples</a></li>
                 <li><a href="archive.php?page=1&type=poem">Poems & Sonnets</a></li>
                 <li><a href="archive.php?page=1&type=flash">Flash Fiction</a></li>
                 <li><a href="archive.php?page=1&type=short">Short Stories</a></li>
 				<li><a href="archive.php?page=1&type=novel">Novella</a></li>
               </ul>
-            </li>
+			  </li>
+			<li><a href="upload.html">Upload</a></li>
           </ul>
 		  <ul class="nav navbar-nav navbar-right">
 			<!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
@@ -82,13 +83,11 @@
 		</div> 
 	  </div>
 	</div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <!-- <div class="jumbotron">
+	
+	<!-- <div class="jumbotron">
       <div class="container">
         <h1>Invisible Ink</h1>
         <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
-        <p><a class="btn btn-primary btn-lg" href="about.html" role="button">Learn more &raquo;</a></p>
       </div>
     </div> -->
 
@@ -98,45 +97,75 @@
 			<div class="col-sm-1"></div>
 			<!-- Basic list of stories in decending order of submission date. -->
 			<div class="col-sm-10">
+			<div class="container">
+				
+				<div class="panel-group">
 				<?php
-				echo "<ul class=\"list-group\">";
-					$stories = getStories($_GET["type"]);
-					$i = count($stories);
-					$max = $i - (10*($_GET["page"] - 1)) - 1;
-					$min = $i - (10*($_GET["page"] - 1)) - 10;
-					if($min < 0)
-						$min = 0;
-					
-					for($x = $max; $x >= $min; $x--) {
-						echo "<li class=\"list-group-item\">";
-							echo "<h3>", getTitle($stories[$x]), "</h3>";
-							echo "<h4>", getAuthor($stories[$x]), "<small>3/28/2017 10:21AM</small></h4>";
-							echo "<ul class=\"list-inline\">";
-								echo "<li><a class=\"btn btn-default\" href=\"story.php?ID=", $stories[$x], "\" role=\"button\">View story &raquo;</a></li>";
-								echo "<li>", getLikes($stories[$x]), "<span class=\"glyphicon glyphicon-thumbs-up\"></span></li>";
-								echo "<li>", getViews($stories[$x]), "<span class=\"glyphicon glyphicon-eye-open\"></span></li>";
-							echo "</ul>";
-						echo "</li>";					
-					}
-				echo "</ul>";
+					//$stories = getStories("all");
+				
+					//$i = count($stories);
+				
+					//$max = $i - (10*($_GET["page"] - 1)) - 1;
+					//$min = $i - (10*($_GET["page"] - 1)) - 10;
+					//if($min < 0)
+						//$min = 0;
+				
+					for($x = 1; $x <= 10; $x=$x+1) {
+						//$title = getTitle($stories[$x]);
+						$title = 'My Story';
+						//$author = getAuthor($stories[$x]);
+						$author = 'Me Colin';
+						//$date = getDateCreated($stories[$x]);
+						$date = Date.now();
+						//$id = $stories[$x];
+						$id = 0;
+						//$likes = getLikes($stories[$x]);
+						$likes = 100;
+						//$views = getViews($stories[$x]);
+						$views = 100;
+						echo "<div class=\"panel panel-default\">
+							<div class=\"panel-heading\">". $title. " - ". $author. "    <small>". $date. "</small></div>
+							<div class=\"panel-body\">
+								<ul class=\"list-inline\">
+									<li><a class=\"btn btn-default\" href=\"story.php?ID=". $id. "\" role=\"button\">View story &raquo;</a></li>
+									<li> ". $likes. " <span class=\"glyphicon glyphicon-thumbs-up\"></span></li>
+									<li> ". $views. " <span class=\"glyphicon glyphicon-eye-open\"></span></li>
+								</ul>
+							</div>
+					</div>";}
 				?>
+				</div>
+				
+			</div>
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
-
-		<ul class="pagination">
-			<?php
-			$stories = getStories($_GET["type"]);
-			$pages = ceil(count($stories)/10);
+		
+		<div class="container">
+		<?php
+			$pages = 1;
+			//$type = $_GET['type'];
 			
-			for($i = 1; $i <= $pages; $i++) {
+			echo "<ul class=\"pagination\">
+				<li><a href=\"archive.php?page=1&type=". $_GET['type']. "\">1</a></li>
+				<li><a href=\"archive.php?page=2&type=". $_GET['type']. "\">2</a></li>
+				<li><a href=\"archive.php?page=3&type=". $_GET['type']. "\">3</a></li>
+				<li><a href=\"archive.php?page=4&type=". $_GET['type']. "\">4</a></li>
+			</ul>";
+		?>
+		</div>
+		<!-- $stories = getStories($_GET["type"]);
+			//$pages = ceil(count($stories)/10);
+			
+			
+			
+			/* for($i = 1; $i <= $pages; $i++) {
 				if($i == $_GET["page"])
-					echo "<li class=\"active\"><a href=\"archive.php?page=", $i, "&type=", $_GET["type"], "\">1</a></li>";
+					echo '<li class="active"><a href="archive.php?page='. $i. '&type='. $_GET["type"]. '">1</a></li>';
 				else
-					echo "<li><a href=\"archive.php?page=", $i, "&type=", $_GET["type"], "\">1</a></li>";
-			}
-			?>
-		</ul>
+					echo '<li><a href="archive.php?page='. $i. '&type='. $_GET["type"]. '">1</a></li>';
+			} */
+		-->
 		
 		<hr>
 
