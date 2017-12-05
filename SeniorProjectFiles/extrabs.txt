@@ -1,0 +1,32 @@
+			//$stories = getStories("all");
+				
+					//$i = count($stories);
+				
+					//$max = $i - (10*($_GET["page"] - 1)) - 1;
+					//$min = $i - (10*($_GET["page"] - 1)) - 10;
+					//if($min < 0)
+						//$min = 0;
+				
+					for($x = 1; $x <= 10; $x=$x+1) {
+						//$title = getTitle($stories[$x]);
+						$title = 'My Story';
+						//$author = getAuthor($stories[$x]);
+						$author = 'Me Colin';
+						//$date = getDateCreated($stories[$x]);
+						$date = Date.now();
+						//$id = $stories[$x];
+						$id = 0;
+						//$likes = getLikes($stories[$x]);
+						$likes = 100;
+						//$views = getViews($stories[$x]);
+						$views = 100;
+						echo "<div class=\"panel panel-default\">
+							<div class=\"panel-heading\">". $title. " - ". $author. "    <small>". $date. "</small></div>
+							<div class=\"panel-body\">
+								<ul class=\"list-inline\">
+									<li><a class=\"btn btn-default\" href=\"story.php?ID=". $id. "\" role=\"button\">View story &raquo;</a></li>
+									<li> ". $likes. " <span class=\"glyphicon glyphicon-thumbs-up\"></span></li>
+									<li> ". $views. " <span class=\"glyphicon glyphicon-eye-open\"></span></li>
+								</ul>
+							</div>
+					</div>";}

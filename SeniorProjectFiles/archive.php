@@ -98,81 +98,72 @@
 			<!-- Basic list of stories in decending order of submission date. -->
 			<div class="col-sm-10">
 			<div class="container">
-				
-				<div class="panel-group">
 				<?php
-					//$stories = getStories("all");
+				//$stories = getStories("all");
+				//$i = count($stories);
 				
-					//$i = count($stories);
+				//$max = $i - (10 * ($_GET["page"] - 1)) - 1;
+				//$min = $i - (10 * ($_GET["page"] - 1)) - 10;
 				
-					//$max = $i - (10*($_GET["page"] - 1)) - 1;
-					//$min = $i - (10*($_GET["page"] - 1)) - 10;
-					//if($min < 0)
-						//$min = 0;
+				//if($min < 0)
+					//$min = 0;
 				
-					for($x = 1; $x <= 10; $x=$x+1) {
-						//$title = getTitle($stories[$x]);
-						$title = 'My Story';
-						//$author = getAuthor($stories[$x]);
-						$author = 'Me Colin';
-						//$date = getDateCreated($stories[$x]);
-						$date = Date.now();
-						//$id = $stories[$x];
-						$id = 0;
-						//$likes = getLikes($stories[$x]);
-						$likes = 100;
-						//$views = getViews($stories[$x]);
-						$views = 100;
-						echo "<div class=\"panel panel-default\">
-							<div class=\"panel-heading\">". $title. " - ". $author. "    <small>". $date. "</small></div>
-							<div class=\"panel-body\">
-								<ul class=\"list-inline\">
-									<li><a class=\"btn btn-default\" href=\"story.php?ID=". $id. "\" role=\"button\">View story &raquo;</a></li>
-									<li> ". $likes. " <span class=\"glyphicon glyphicon-thumbs-up\"></span></li>
-									<li> ". $views. " <span class=\"glyphicon glyphicon-eye-open\"></span></li>
-								</ul>
-							</div>
-					</div>";}
+				//$t = getTitle($stories[$x]);
+				//$a = getAuthor($stories[$x]);
+				//$d = getDateCreated($stories[$x]);
+				//$i = $stories[$x];
+				//$l = getLikes($stories[$x]);
+				//$v = getViews($stories[$x]);
+				
+				
+				for($x = 1; $x <= 10; $x++) { 					
+					$t = "My Story";
+					$a = "Colin Engle";
+					$d = date("Y/m/d");
+					$l = $x;
+					$v = $x;
 				?>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading"> <?php echo $t; ?> <?php echo $x; ?> - <?php echo $a; ?> <small> <?php echo $d; ?> </small></div>
+						<div class="panel-body">
+							<ul class="list-inline">
+								<li><a class="btn btn-default" href="story.php?ID=<?php echo $x; ?>" role="button">View story &raquo;</a></li>
+								<li> <?php echo $l; ?> <span class="glyphicon glyphicon-thumbs-up"></span></li>
+								<li> <?php echo $v; ?> <span class="glyphicon glyphicon-eye-open"></span></li>
+							</ul>
+						</div>
+					</div>
+				<?php } ?>				
 				</div>
 				
 			</div>
-			</div>
 			<div class="col-sm-1"></div>
 		</div>
+	</div>
 		
-		<div class="container">
-		<?php
-			$pages = 1;
-			//$type = $_GET['type'];
-			
-			echo "<ul class=\"pagination\">
-				<li><a href=\"archive.php?page=1&type=". $_GET['type']. "\">1</a></li>
-				<li><a href=\"archive.php?page=2&type=". $_GET['type']. "\">2</a></li>
-				<li><a href=\"archive.php?page=3&type=". $_GET['type']. "\">3</a></li>
-				<li><a href=\"archive.php?page=4&type=". $_GET['type']. "\">4</a></li>
-			</ul>";
-		?>
-		</div>
-		<!-- $stories = getStories($_GET["type"]);
-			//$pages = ceil(count($stories)/10);
-			
-			
-			
-			/* for($i = 1; $i <= $pages; $i++) {
-				if($i == $_GET["page"])
-					echo '<li class="active"><a href="archive.php?page='. $i. '&type='. $_GET["type"]. '">1</a></li>';
-				else
-					echo '<li><a href="archive.php?page='. $i. '&type='. $_GET["type"]. '">1</a></li>';
-			} */
-		-->
+	<div class="container">
+		<ul class="pagination">
+			<?php
+			//$type = $_GET["type"];
+			$type = "all";
+			//for($j = 1; $j <= count($stories)/10 + 1; $j = $j + 1) { 
+			for($j = 1; $j <= 3; $j++):
+				if($j == 1): ?>
+					<li class="active"><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>
+				<?php else: ?>
+					<li><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>
+				<?php endif; ?>
+			<?php endfor; ?>
+		</ul>
+	</div>
 		
-		<hr>
+	<hr>
 
-		<footer>
-			<p>MEAN Machine - Spring Semester 2017</p>
-		</footer>
-    </div> <!-- /container -->
+	<footer>
+		<p>MEAN Machine - Spring Semester 2017</p>
+	</footer>
+</div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
