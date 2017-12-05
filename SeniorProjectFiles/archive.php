@@ -94,9 +94,8 @@
     <div class="container">
 		<!-- Example row of columns -->
 		<div class="row">
-			<div class="col-sm-1"></div>
 			<!-- Basic list of stories in decending order of submission date. -->
-			<div class="col-sm-10">
+			<div class="col-sm-12">
 			<div class="container">
 				<?php
 				//$stories = getStories("all");
@@ -138,7 +137,6 @@
 				</div>
 				
 			</div>
-			<div class="col-sm-1"></div>
 		</div>
 	</div>
 		
@@ -149,7 +147,7 @@
 			$type = "all";
 			//for($j = 1; $j <= count($stories)/10 + 1; $j = $j + 1) { 
 			for($j = 1; $j <= 3; $j++):
-				if($j == 1): ?>
+				if($j == $_GET['page']): ?>
 					<li class="active"><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>
 				<?php else: ?>
 					<li><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>

@@ -100,23 +100,21 @@
 			<div class="col-sm-10">
 				<?php 
 				$STORYID = $_GET["ID"];
+				?>
+				<h3> <?php echo getTitle($STORYID); ?> </h3>
+				<h4> <?php echo getAuthor($STORYID); ?> <small> <?php echo getDateCreated($STORYID); ?> </small></h4>
+				<p></p>
+				<ul class="text-center list-inline">
+					<li><button type="button" class="btn btn-default"> Like <span class="glyphicon glyphicon-thumbs-up"></span></button></li>";
+					<li> <?php echo getLikes($STORYID); ?> <span class="glyphicon glyphicon-thumbs-up"></span></li>";
+					<li> <?php echo getViews($STORYID); ?> <span class="glyphicon glyphicon-eye-open"></span></p></li>";
+				</ul>
 				
-				echo "<h3>", getTitle($STORYID), "</h3>";
-				echo "<h4>", getAuthor($STORYID), "<small>", getDateCreated($STORYID), "</small></h4>";
-				echo "<p></p>";
-				echo "<ul class=\"text-center list-inline\">";
-					echo "<li><button type=\"button\" class=\"btn btn-default\">Like <span class=\"glyphicon glyphicon-thumbs-up\"></span></button></li>";
-					echo "<li>", getLikes($STORYID), "<span class=\"glyphicon glyphicon-thumbs-up\"></span></li>";
-					echo "<li>", getViews($STORYID), "<span class=\"glyphicon glyphicon-eye-open\"></span></p></li>";
-				echo "</ul>";
+				<hr>
 				
-				echo "<hr>";
-				
-				echo "<div class=\"well\">";					
-					echo "<p id=\"story\">", getBody($STORYID), "</p>";
-				echo "</div>";
-				?>				
-			</div>
+				<div class="well">					
+					<p id="story"> <?php echo getBody($STORYID) ?> </p>
+				</div>				
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
