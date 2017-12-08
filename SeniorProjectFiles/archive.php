@@ -24,12 +24,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
   <body>
 
-	<script type="text/javascript" src="mongoose.js"></script>
-  
-    <nav class="navbar navbar-inverse navbar-static-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -49,13 +47,13 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Archives <span class="caret"></span></a>
               <ul class="dropdown-menu">
 				<li><a href="archive.php?page=1&type=all">All</a></li>
-				<li><a href="exampleStory.html">Examples</a></li>
+				<li><a href="archive.php?page=1&type=example">Examples</a></li>
                 <li><a href="archive.php?page=1&type=poem">Poems & Sonnets</a></li>
                 <li><a href="archive.php?page=1&type=flash">Flash Fiction</a></li>
                 <li><a href="archive.php?page=1&type=short">Short Stories</a></li>
 				<li><a href="archive.php?page=1&type=novel">Novella</a></li>
               </ul>
-			  </li>
+            </li>
 			<li><a href="upload.html">Upload</a></li>
           </ul>
 		  <ul class="nav navbar-nav navbar-right">
@@ -97,34 +95,52 @@
 			<!-- Basic list of stories in decending order of submission date. -->
 			<div class="col-sm-12">
 			<div class="container">
-				<?php
-				//$stories = getStories("all");
-				//$i = count($stories);
+<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "invisibleink";
+					
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				} 
+
+				$sql = "";
 				
-				//$max = $i - (10 * ($_GET["page"] - 1)) - 1;
-				//$min = $i - (10 * ($_GET["page"] - 1)) - 10;
+				$type = $_GET["type"];
 				
-				//if($min < 0)
-					//$min = 0;
+				if($type != "all")
+					$sql = "SELECT id, title, author, date_created, likes, views FROM stories WHERE story_type = $type ORDER BY date_created ASC";
+				else 
+					$sql = "SELECT id, title, author, date_created, likes, views FROM stories ORDER BY date_created ASC";
 				
-				//$t = getTitle($stories[$x]);
-				//$a = getAuthor($stories[$x]);
-				//$d = getDateCreated($stories[$x]);
-				//$i = $stories[$x];
-				//$l = getLikes($stories[$x]);
-				//$v = getViews($stories[$x]);
+				$stories = $conn->query($sql);
 				
+				if ($stories->num_rows > 0) {				
+					$i = $stories->num_rows;
+					$j = 0;
+					
+					$min = (10 * ($_GET["page"] - 1));
+					$max = $min + 10;
 				
-				for($x = 1; $x <= 10; $x++) { 					
-					$t = "My Story";
-					$a = "Colin Engle";
-					$d = date("Y/m/d");
-					$l = $x;
-					$v = $x;
-				?>
+					if($max >= $i)
+						$max = $i;
+				
+					while($row = $stories->fetch_assoc()) { 
+						if($j >= $min && $j <= $max) {
+							$t = $row["title"];
+							$a = $row["author"];
+							$d = $row["date_created"];
+							$l = $row["likes"];
+							$v = $row["views"];
+							$x = $row["id"];
+?>
 					
 					<div class="panel panel-default">
-						<div class="panel-heading"> <?php echo $t; ?> <?php echo $x; ?> - <?php echo $a; ?> <small> <?php echo $d; ?> </small></div>
+						<div class="panel-heading"> <?php echo $t; ?> - <?php echo $a; ?> <small> <?php echo $d; ?> </small></div>
 						<div class="panel-body">
 							<ul class="list-inline">
 								<li><a class="btn btn-default" href="story.php?ID=<?php echo $x; ?>" role="button">View story &raquo;</a></li>
@@ -133,7 +149,16 @@
 							</ul>
 						</div>
 					</div>
-				<?php } ?>				
+					
+<?php 					} 
+
+						$j++;
+					} 
+				} else {
+					echo "Error: " . $sql . "<br>" . $conn->error;
+				}
+
+				$conn->close();?>				
 				</div>
 				
 			</div>
@@ -143,10 +168,9 @@
 	<div class="container">
 		<ul class="pagination">
 			<?php
-			//$type = $_GET["type"];
+			$type = $_GET["type"];
 			$type = "all";
-			//for($j = 1; $j <= count($stories)/10 + 1; $j = $j + 1) { 
-			for($j = 1; $j <= 3; $j++):
+			for($j = 1; $j <= count($stories)/10 + 1; $j = $j + 1) { 
 				if($j == $_GET['page']): ?>
 					<li class="active"><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>
 				<?php else: ?>
@@ -161,7 +185,6 @@
 	<footer>
 		<p>MEAN Machine - Spring Semester 2017</p>
 	</footer>
-</div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

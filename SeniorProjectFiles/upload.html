@@ -24,7 +24,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -45,9 +45,9 @@
             <li><a href="contact.html">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Archives <span class="caret"></span></a>
-              <<ul class="dropdown-menu">
+              <ul class="dropdown-menu">
 				<li><a href="archive.php?page=1&type=all">All</a></li>
-				<li><a href="exampleStory.html">Examples</a></li>
+				<li><a href="archive.php?page=1&type=example">Examples</a></li>
                 <li><a href="archive.php?page=1&type=poem">Poems & Sonnets</a></li>
                 <li><a href="archive.php?page=1&type=flash">Flash Fiction</a></li>
                 <li><a href="archive.php?page=1&type=short">Short Stories</a></li>
@@ -82,125 +82,132 @@
 	  </div>
 	</div>
 	
-	<hr>
-	
-	<div class="container">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Invisible Ink</h1>
+        <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
+        <p><a class="btn btn-primary btn-lg" href="about.html" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+		<!-- Example row of columns -->
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-8">
 				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="text-center">Upload a Story</h2>
-					</div>
-					<form class="form-horizontal">
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="title">Title:</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="title" placeholder="Enter story title">
-							</div>
-						</div>
+					<div class="panel-heading">Upload Story</div>
+					<div class="panel-body">
+<!-- ================================SUBMIT FORM================================ -->
+<form action="submit.php" method="post">
+	<div class="form-group row">
+		<label class="control-label col-sm-2" for="title">Title:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" name="title" id="title" placeholder="Enter story title">
+		</div>
+	</div>				
 						
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="author">Author:</label>
-							<div class="col-sm-8"> 
-								<input type="text" class="form-control" id="author" placeholder="Enter author name">
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-sm-1"></div>
-							<div class="col-sm-4">
-								<div class="form-group"> 
-									<label class="control-label col-sm-2" for="type">Type:</label>
-									<div class="col-sm-10">
-										<div class="radio">
-											<label><input type="radio" name="type">Poems & Sonnets</label>
-										</div>
-										<div class="radio">
-											<label><input type="radio" name="type">Flash Fiction</label>
-										</div>	
-										<div class="radio">
-											<label><input type="radio" name="type">Short Stories</label>
-										</div>
-										<div class="radio">
-											<label><input type="radio" name="type">Novella</label>
-										</div>
-										<div class="radio">
-											<label><input type="radio" name="type">Example Piece</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-5">
-								<div class="form-group">
-									<label for="decay">Select decay scale:</label>
-									<select class="form-control" id="decay">
-										<option>0.25</option>
-										<option>0.50</option>
-										<option>0.75</option>
-										<option>1.00</option>
-										<option>2.00</option>
-										<option>5.00</option>
-										<option>10.00</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="influ">Select influence scale:</label>
-									<select class="form-control" id="influ">
-										<option>0.25</option>
-										<option>0.50</option>
-										<option>0.75</option>
-										<option>1.00</option>
-										<option>2.00</option>
-										<option>5.00</option>
-										<option>10.00</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="cycleRate">Select initial cycle:</label>
-									<select class="form-control" id="cycleRate">
-										<option>30 seconds</option>
-										<option>1 minutes</option>
-										<option>5 minutes</option>
-										<option>15 minutes</option>
-										<option>30 minutes</option>
-										<option>1 hours</option>
-										<option>3 hours</option>
-										<option>6 hours</option>
-										<option>12 hours</option>
-										<option>24 hours</option>
-										<option>48 hours</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-							<label for="storybody">Story body:</label>
-							</div>
-							<br>
-							<div class="col-sm-offset-2 col-sm-8">
-								<textarea class="form-control" rows="20" id="storybody"></textarea>
-							</div>
-						</div>	
-						
-						<div class="form-group"> 
-							<div class="col-sm-offset-2 col-sm-10">
-								<button type="submit" class="btn btn-default">Submit</button>
-							</div>
-						</div>
-					</form>
+	<div class="form-group row">
+		<label class="control-label col-sm-2" for="author">Author:</label>
+		<div class="col-sm-10"> 
+			<input type="text" class="form-control" name="author" id="author" placeholder="Enter author name">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-offset-1 col-sm-4">
+			<div class="form-group row"> 
+				<label for="type">Type:</label>
+				<select class="form-control" name="type" id="cycleRate">
+					<option value="poem">Poems & Sonnets</option>
+					<option value="flash">Flash Fiction</option>
+					<option value="short">Short Stories</option>
+					<option value="novel">Novella</option>
+					<option value="example">Example Story</option>
+				</select>
+			</div>
+			<div class="form-group row">
+				<label for="cycleRate">Select initial cycle:</label>
+				<select class="form-control" name="cycleRate" id="cycleRate">
+					<option value="0.008">30 seconds</option>
+					<option value="0.016">1 minutes</option>
+					<option value="0.833">5 minutes</option>
+					<option value="0.25">15 minutes</option>
+					<option value="0.5">30 minutes</option>
+					<option value="1.0">1 hours</option>
+					<option value="3.0">3 hours</option>
+					<option value="6.0">6 hours</option>
+					<option value="12.0">12 hours</option>
+					<option value="24.0">24 hours</option>
+					<option value="48.0">48 hours</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-sm-offset-2 col-sm-4">
+			<div class="form-group row">
+				<label for="decay">Select decay scale:</label>
+				<select class="form-control" name="decay" id="decay">
+					<option>0.25</option>
+					<option>0.50</option>
+					<option>0.75</option>
+					<option>1.00</option>
+					<option>2.00</option>
+					<option>5.00</option>
+					<option>10.00</option>
+				</select>
+			</div>
+			<div class="form-group row">
+				<label for="influ">Select influence scale:</label>
+				<select class="form-control" name="influ" id="influ">
+					<option>0.25</option>
+					<option>0.50</option>
+					<option>0.75</option>
+					<option>1.00</option>
+					<option>2.00</option>
+					<option>5.00</option>
+					<option>10.00</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">			
+		<div class="form-group row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<label for="storybody">Story body:</label>
+				<div class="col-sm-12">
+					<textarea class="form-control" rows="20" name="storyBody" id="storyBody"></textarea>
 				</div>
 			</div>	
-			
-		
+		</div>
+	</div>
 	
-	<!-- Bootstrap core JavaScript
+	<div class="form-group-row"> 
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">Submit</button>
+		</div>
+	</div>
+</form>
+<!-- ================================SUBMIT FORM================================ -->
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+
+		<hr>
+
+		<footer>
+			<p>MEAN Machine - Spring Semester 2017</p>
+		</footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
     <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-	</body>
-	</html>
+  </body>
+</html>
