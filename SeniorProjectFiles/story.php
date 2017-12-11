@@ -9,8 +9,8 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Invisible Ink - Ephemeral Art Application</title>	
-	
+    <title>Invisible Ink - Ephemeral Art Application</title>
+
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Bootstrap theme -->
@@ -25,12 +25,9 @@
     <![endif]-->
   </head>
 
-  <script type="text/javascript" src="mongoose.js"></script>
-  
-  <!-- <body onload="startStory()"> -->
   <body>
-  
-    <nav class="navbar navbar-inverse navbar-static-top">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -50,13 +47,14 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Archives <span class="caret"></span></a>
               <ul class="dropdown-menu">
 				<li><a href="archive.php?page=1&type=all">All</a></li>
-				<li><a href="exampleStory.html">Examples</a></li>
+				<li><a href="archive.php?page=1&type=example">Examples</a></li>
                 <li><a href="archive.php?page=1&type=poem">Poems & Sonnets</a></li>
                 <li><a href="archive.php?page=1&type=flash">Flash Fiction</a></li>
                 <li><a href="archive.php?page=1&type=short">Short Stories</a></li>
 				<li><a href="archive.php?page=1&type=novel">Novella</a></li>
               </ul>
             </li>
+			<li><a href="upload.html">Upload</a></li>
           </ul>
 		  <ul class="nav navbar-nav navbar-right">
 			<!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
@@ -83,15 +81,13 @@
 		</div> 
 	  </div>
 	</div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <!-- <div class="jumbotron">
+	
+	<div class="jumbotron">
       <div class="container">
         <h1>Invisible Ink</h1>
         <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
-        <p><a class="btn btn-primary btn-lg" href="about.html" role="button">Learn more &raquo;</a></p>
       </div>
-    </div> -->
+    </div>
 
     <div class="container">
 		<!-- Example row of columns -->
@@ -99,21 +95,40 @@
 			<div class="col-sm-1"></div>
 			<div class="col-sm-10">
 				<?php 
-				$STORYID = $_GET["ID"];
+				$storyID = $_GET["ID"];
+				
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "invisibleink";
+					
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				} 
+
+				$sql = "SELECT title, author, date_created, body, likes, views FROM stories WHERE id = $storyID";
+				
+				$stories = $conn->query($sql);
+				
+				$row = $stories->fetch_assoc()
+				
 				?>
-				<h3> <?php echo getTitle($STORYID); ?> </h3>
-				<h4> <?php echo getAuthor($STORYID); ?> <small> <?php echo getDateCreated($STORYID); ?> </small></h4>
+				<h3> <?php echo $row["title"]; ?> </h3>
+				<h4> <?php echo $row["author"]; ?> <small> <?php echo $row["date_created"]; ?> </small></h4>
 				<p></p>
 				<ul class="text-center list-inline">
-					<li><button type="button" class="btn btn-default"> Like <span class="glyphicon glyphicon-thumbs-up"></span></button></li>";
-					<li> <?php echo getLikes($STORYID); ?> <span class="glyphicon glyphicon-thumbs-up"></span></li>";
-					<li> <?php echo getViews($STORYID); ?> <span class="glyphicon glyphicon-eye-open"></span></p></li>";
+					<li><button type="button" class="btn btn-default"> Like <span class="glyphicon glyphicon-thumbs-up"></span></button></li>
+					<li> <?php echo $row["likes"]; ?> <span class="glyphicon glyphicon-thumbs-up"></span></li>
+					<li> <?php echo $row["views"]; ?> <span class="glyphicon glyphicon-eye-open"></span></p></li>
 				</ul>
 				
 				<hr>
 				
 				<div class="well">					
-					<p id="story"> <?php echo getBody($STORYID) ?> </p>
+					<p id="story"> <?php echo $row['body']; ?> </p>
 				</div>				
 			</div>
 			<div class="col-sm-1"></div>

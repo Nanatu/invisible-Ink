@@ -19,13 +19,14 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
 
-$title = $_GET['title'];
-$author = $_GET['author'];
-$type = $_GET['type'];
-$storyBody = $_GET['storyBody'];
-$decay = $_GET['decay'];
-$influ = $_GET['influ'];
-$initCycle = $_GET['cycleRate'];
+$title = mysqli_real_escape_string($conn, $_POST['title']);
+$author = mysqli_real_escape_string($conn, $_POST['author']);
+$storyBody = mysqli_real_escape_string($conn, $_POST['storyBody']);
+
+$type = $_POST['type'];
+$decay = $_POST['decay'];
+$influ = $_POST['influ'];
+$initCycle = $_POST['cycleRate'];
 
 //Calculates the first minor tick based on the initial cycle rate and current time
 $nextEvent = time() + ($initCycle * (60*60))/10;
@@ -34,7 +35,7 @@ $cycles = 0;
 $likes = 1;
 $views = 1;
 
-$sql = "INSERT INTO `stories` (`title`, `author`, `body`, `story_type`, `tick_rate`, `influence_rate`, `next_event`, `cycles`, `likes`, `views`) VALUES (`$title`, `$author`, `$storyBody`, `$type`, `$decay`, `$influ`, `$nextEvent`, `$cycles`, `$likes`, `$views`)";
+$sql = "INSERT INTO `stories` (`title`, `author`, `body`, `story_type`, `tick_rate`, `influence_rate`, `next_event`, `cycles`, `likes`, `views`) VALUES ('$title', '$author', '$storyBody', '$type', $decay, $influ, $nextEvent, $cycles, $likes, $views)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

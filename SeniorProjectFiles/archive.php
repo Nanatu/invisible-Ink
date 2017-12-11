@@ -82,12 +82,12 @@
 	  </div>
 	</div>
 	
-	<!-- <div class="jumbotron">
+	<div class="jumbotron">
       <div class="container">
         <h1>Invisible Ink</h1>
         <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
       </div>
-    </div> -->
+    </div>
 
     <div class="container">
 		<!-- Example row of columns -->
@@ -112,31 +112,34 @@
 				
 				$type = $_GET["type"];
 				
+				$offset = 10 * ($_GET["page"] - 1);
+				
 				if($type != "all")
-					$sql = "SELECT id, title, author, date_created, likes, views FROM stories WHERE story_type = $type ORDER BY date_created ASC";
+					$sql = "SELECT id, title, author, date_created, likes, views FROM stories WHERE story_type = $type ORDER BY date_created ASC LIMIT 10 OFFSET $offset";
 				else 
-					$sql = "SELECT id, title, author, date_created, likes, views FROM stories ORDER BY date_created ASC";
+					$sql = "SELECT id, title, author, date_created, likes, views FROM stories ORDER BY date_created ASC LIMIT 10 OFFSET $offset";
 				
 				$stories = $conn->query($sql);
 				
-				if ($stories->num_rows > 0) {				
-					$i = $stories->num_rows;
-					$j = 0;
-					
-					$min = (10 * ($_GET["page"] - 1));
-					$max = $min + 10;
+				$num_stories = $stories->num_rows;
 				
-					if($max >= $i)
-						$max = $i;
+				if ($stories->num_rows > 0) {				
+					//$i = $stories->num_rows;
+					//$j = 0;
+					
+					//$min = (10 * ($_GET["page"] - 1));
+					//$max = $min + 9;
+				
+					//if($max >= $i)
+						//$max = $i;
 				
 					while($row = $stories->fetch_assoc()) { 
-						if($j >= $min && $j <= $max) {
-							$t = $row["title"];
-							$a = $row["author"];
-							$d = $row["date_created"];
-							$l = $row["likes"];
-							$v = $row["views"];
-							$x = $row["id"];
+						$t = $row["title"];
+						$a = $row["author"];
+						$d = $row["date_created"];
+						$l = $row["likes"];
+						$v = $row["views"];
+						$x = $row["id"];
 ?>
 					
 					<div class="panel panel-default">
@@ -150,15 +153,14 @@
 						</div>
 					</div>
 					
-<?php 					} 
-
-						$j++;
+<?php
 					} 
 				} else {
 					echo "Error: " . $sql . "<br>" . $conn->error;
 				}
-
-				$conn->close();?>				
+				
+				$conn->close();
+				?>				
 				</div>
 				
 			</div>
@@ -169,14 +171,16 @@
 		<ul class="pagination">
 			<?php
 			$type = $_GET["type"];
-			$type = "all";
-			for($j = 1; $j <= count($stories)/10 + 1; $j = $j + 1) { 
-				if($j == $_GET['page']): ?>
+			
+			for($j = 1; $j <= $num_stories/10 + 1; $j = $j + 1) { 
+				if($j == $_GET["page"]) { ?>
 					<li class="active"><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>
-				<?php else: ?>
+				<?php } else { ?>
 					<li><a href="archive.php?page=<?php echo $j ?>&type=<?php echo $type ?>"><?php echo $j ?></a></li>
-				<?php endif; ?>
-			<?php endfor; ?>
+				<?php }
+				} 
+			
+			?>
 		</ul>
 	</div>
 		
