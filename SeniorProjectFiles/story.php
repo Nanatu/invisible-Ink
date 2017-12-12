@@ -26,7 +26,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -88,7 +87,7 @@
         <p>Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application. Basic info about the project including brief description about the application. Include details relevant to the idea of ephemeral art and the objective of the application.</p>
       </div>
     </div>
-
+	
     <div class="container">
 		<!-- Example row of columns -->
 		<div class="row">
@@ -113,7 +112,7 @@
 				
 				$stories = $conn->query($sql);
 				
-				$row = $stories->fetch_assoc()
+				$row = $stories->fetch_assoc();
 				
 				?>
 				<h3> <?php echo $row["title"]; ?> </h3>
@@ -125,16 +124,14 @@
 					<li> <?php echo $row["views"]; ?> <span class="glyphicon glyphicon-eye-open"></span></p></li>
 				</ul>
 				
-				<hr>
+				<!-- PHP DECAY SCRIPT HERE -->
 				
 				<div class="well">					
-					<p id="story"> <?php echo $row['body']; ?> </p>
+					<p id="story" style="white-space:pre-wrap"> <?php echo $row["body"]; ?> </p>
 				</div>				
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
-
-		<hr>
 
 		<footer>
 			<p>MEAN Machine - Spring Semester 2017</p>
