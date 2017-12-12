@@ -1,8 +1,7 @@
-CREATE DATABASE invisibleink;
+CREATE DATABASE IF NOT EXISTS invisibleink;
 
 use invisibleink;
 
-DROP TABLE IF EXISTS `stories`;
 CREATE TABLE IF NOT EXISTS `stories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(256) NOT NULL,
@@ -19,9 +18,6 @@ CREATE TABLE IF NOT EXISTS `stories` (
   PRIMARY KEY (`id`)
 );
 
-/*
-SAMPLE QUERIES TO INSERT
-
 INSERT INTO `stories` (`id`, `title`, `author`, `body`, `story_type`, `date_created`, `tick_rate`, `influence_rate`, `next_event`, `cycles`, `likes`, `views`) VALUES
 (1, 'This is an example title (1)', 'This is an example author (1)', 'This is an example body', 'Poems & Sonnets', '2017-12-07 03:11:25', '0.25', '0.25', 1, 1, 1, 1),
 (2, 'This is an example title (2)', 'This is an example author (2)', 'This is an example body', 'Flash Fiction', '2017-12-07 03:11:25', '0.50', '0.50', 2, 2, 2, 2),
@@ -36,9 +32,8 @@ INSERT INTO `stories` (`id`, `title`, `author`, `body`, `story_type`, `date_crea
 
 
 
-
+/*
 SAMPLE QUERY TO UPDATE
 
 UPDATE `stories` SET `body` = 'This is an example body (3)' WHERE `stories`.`id` = 2
-
 */
