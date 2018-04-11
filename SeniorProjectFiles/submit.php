@@ -34,8 +34,9 @@ $nextEvent = time() + ($initCycle * (60*60))/10;
 $cycles = 0;
 $likes = 1;
 $views = 1;
+$init_cycle = 1;
 
-$sql = "INSERT INTO `stories` (`title`, `author`, `body`, `story_type`, `tick_rate`, `influence_rate`, `next_event`, `cycles`, `likes`, `views`) VALUES ('$title', '$author', '$storyBody', '$type', $decay, $influ, $nextEvent, $cycles, $likes, $views)";
+$sql = "INSERT INTO `stories` (`title`, `author`, `body`, `story_type`, `tick_rate`, `influence_rate`, `next_event`, `cycles`, `likes`, `views`) VALUES ('$title', '$author', '$storyBody', '$type', $decay, $influ, $nextEvent, $cycles, $likes, $views, $init_cycle)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
